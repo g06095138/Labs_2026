@@ -1,0 +1,36 @@
+graph Chen {
+graph [bgcolor=white, label="АИС «Служба такси» — модель в нотации Чена", labelloc=t, fontsize=24, overlap=false, splines=true, pad=0.5, nodesep=0.45, ranksep=1.1];
+node [fontname="DejaVu Sans",fontsize=12]; edge [fontname="DejaVu Sans",fontsize=12];
+client [shape=box,style=filled,fillcolor="#dceafa",label="Клиент"];
+client0 [shape=ellipse,label=<<U>Идентификатор клиента</U>>]; client -- client0;
+client1 [shape=ellipse,label="ФИО"]; client -- client1;
+client2 [shape=ellipse,label="Телефон"]; client -- client2;
+driver [shape=box,style=filled,fillcolor="#dceafa",label="Водитель"];
+driver0 [shape=ellipse,label=<<U>Идентификатор водителя</U>>]; driver -- driver0;
+driver1 [shape=ellipse,label="ФИО"]; driver -- driver1;
+driver2 [shape=ellipse,label="Марка и модель автомобиля"]; driver -- driver2;
+driver3 [shape=ellipse,label="Государственный номер"]; driver -- driver3;
+driver4 [shape=ellipse,label="Признак доступности"]; driver -- driver4;
+order [shape=box,style=filled,fillcolor="#dceafa",label="Заказ"];
+order0 [shape=ellipse,label=<<U>Идентификатор заказа</U>>]; order -- order0;
+order1 [shape=ellipse,label="Адрес подачи"]; order -- order1;
+order2 [shape=ellipse,label="Адрес назначения"]; order -- order2;
+order3 [shape=ellipse,label="Расстояние"]; order -- order3;
+order4 [shape=ellipse,label="Стоимость"]; order -- order4;
+order5 [shape=ellipse,label="Статус"]; order -- order5;
+order6 [shape=ellipse,label="Дата и время создания"]; order -- order6;
+tariff [shape=box,style=filled,fillcolor="#dceafa",label="Тариф"];
+tariff0 [shape=ellipse,label=<<U>Идентификатор тарифа</U>>]; tariff -- tariff0;
+tariff1 [shape=ellipse,label="Название"]; tariff -- tariff1;
+tariff2 [shape=ellipse,label="Базовая цена"]; tariff -- tariff2;
+tariff3 [shape=ellipse,label="Цена за километр"]; tariff -- tariff3;
+creates [shape=diamond,style=filled,fillcolor="#fff0cb",label="Создаёт"];
+client -- creates [label="1"];
+creates -- order [label="N",color="black:black"];
+performs [shape=diamond,style=filled,fillcolor="#fff0cb",label="Выполняет"];
+driver -- performs [label="1"];
+performs -- order [label="N"];
+applies [shape=diamond,style=filled,fillcolor="#fff0cb",label="Применяется к"];
+tariff -- applies [label="1"];
+applies -- order [label="N",color="black:black"];
+}

@@ -1,0 +1,30 @@
+graph UseCase {
+graph [rankdir=LR, bgcolor=white, label="АИС «Служба такси» — варианты использования", labelloc=t, fontsize=22, pad=0.4, nodesep=0.35, ranksep=0.8];
+node [fontname="DejaVu Sans", fontsize=12]; edge [fontname="DejaVu Sans", fontsize=10];
+client [shape=plaintext,label="КЛИЕНТ"];
+dispatcher [shape=plaintext,label="ДИСПЕТЧЕР"];
+driver [shape=plaintext,label="ВОДИТЕЛЬ"];
+subgraph cluster_system {label="АИС «Служба такси»"; color="#476987"; style=rounded;
+node [shape=ellipse,style=filled,fillcolor="#edf4fa"];
+tariffs [label="Просмотреть тарифы"];
+create [label="Создать заказ"];
+clientorders [label="Просмотреть заказы\nи их статусы"];
+allorders [label="Просмотреть все заказы"];
+free [label="Просмотреть свободных\nводителей"];
+assign [label="Назначить водителя"];
+active [label="Просмотреть назначенные\nактивные заказы"];
+start [label="Начать поездку"];
+finish [label="Завершить поездку"];
+validate [label="Проверить обязательные\nполя"];
+cost [label="Рассчитать стоимость"];
+busy [label="Отметить водителя\nзанятым"];
+release [label="Освободить водителя"];
+}
+client -- {tariffs create clientorders};
+dispatcher -- {allorders free assign};
+driver -- {active start finish};
+create -- validate [style=dashed,dir=forward,arrowhead=vee,label="«include»"];
+create -- cost [style=dashed,dir=forward,arrowhead=vee,label="«include»"];
+assign -- busy [style=dashed,dir=forward,arrowhead=vee,label="«include»"];
+finish -- release [style=dashed,dir=forward,arrowhead=vee,label="«include»"];
+}
