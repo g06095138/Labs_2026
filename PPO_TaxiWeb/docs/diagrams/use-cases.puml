@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+skinparam defaultFontName DejaVu Sans
+actor "Клиент" as Client
+actor "Диспетчер" as Dispatcher
+actor "Водитель" as Driver
+rectangle "Сайт «Служба такси»" {
+ usecase "Войти / выйти" as Login
+ usecase "Оценить поездку и\nсравнить тарифы" as Compare
+ usecase "Создать заказ" as Create
+ usecase "Посмотреть свои заказы" as Own
+ usecase "Посмотреть все заказы" as All
+ usecase "Назначить свободного\nводителя" as Assign
+ usecase "Посмотреть свои\nактивные заказы" as Active
+ usecase "Начать поездку" as Start
+ usecase "Завершить поездку" as Finish
+}
+Client -- Login
+Dispatcher -- Login
+Driver -- Login
+Client -- Compare
+Client -- Create
+Client -- Own
+Dispatcher -- All
+Dispatcher -- Assign
+Driver -- Active
+Driver -- Start
+Driver -- Finish
+@enduml

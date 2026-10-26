@@ -1,0 +1,85 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+hide empty members
+class TripInput {
+ FullName : string
+ Phone : string
+ Pickup : string
+ Destination : string
+ DistanceKm : decimal
+ TariffId : string
+ Validate()
+}
+class Tariff {
+ Id : string
+ Name : string
+ BasePrice : decimal
+ Rate : decimal
+ Active : bool
+}
+class Quote {
+ TariffId : string
+ BasePrice : decimal
+ VariablePrice : decimal
+ Total : decimal
+}
+class Order {
+ Id : string
+ ClientId : string
+ DriverId : string?
+ TariffId : string
+ DistanceKm : decimal
+ BasePrice : decimal
+ Rate : decimal
+ Cost : decimal
+ Status : OrderStatus
+ CreatedAt : DateTimeOffset
+}
+class Driver {
+ Id : string
+ Available : bool
+}
+enum OrderStatus {
+ Created
+ Assigned
+ InProgress
+ Completed
+}
+class QuoteService {
+ Calculate(Tariff, decimal) : Quote
+ Compare(tariffs, decimal) : Quote[]
+ ValidateDistance(decimal)
+}
+class TaxiService {
+ Compare(Actor, decimal)
+ Create(Actor, TripInput) : Order
+ List(Actor) : Order[]
+ Get(Actor, id) : Order
+ FreeDrivers(Actor)
+ Assign(Actor, id, driverId)
+ Start(Actor, id)
+ Complete(Actor, id)
+}
+interface ITaxiStore {
+ Tariffs()
+ Drivers()
+ Orders()
+ Get(id)
+ Create(clientId, TripInput)
+ Assign(orderId, driverId)
+ Transition(orderId, driverId, from, to)
+}
+Tariff "1" -- "0..*" Order : выбран
+Driver "0..1" -- "0..*" Order : выполняет
+Order --> OrderStatus
+QuoteService ..> Tariff
+QuoteService ..> Quote
+TaxiService --> ITaxiStore
+TaxiService --> QuoteService
+TaxiService ..> TripInput
+TaxiService ..> Order
+note bottom of Order
+Цена и компоненты — снимок.
+Обновляется статус, не маршрут.
+end note
+@enduml

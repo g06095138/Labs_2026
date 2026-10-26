@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk.Web"><ItemGroup><ProjectReference Include="../Taxi.Domain/Taxi.Domain.csproj" /><ProjectReference Include="../Taxi.Application/Taxi.Application.csproj" /><ProjectReference Include="../Taxi.Infrastructure/Taxi.Infrastructure.csproj" /></ItemGroup></Project>

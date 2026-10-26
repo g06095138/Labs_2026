@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b75dd35d-3037-416c-a62e-1829d1bff719" name="@4c9dfb9fb8ea 2026-10-26 18:43:56" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-26T18:43:56.3229341+00:00" queuing="2026-10-26T18:43:56.3229341+00:00" start="2026-10-26T18:43:32.0646810+00:00" finish="2026-10-26T18:43:58.2675920+00:00" />
+  <TestSettings name="default" id="19f740ed-a3e9-48da-90e6-98bb657da30c">
+    <Deployment runDeploymentRoot="_4c9dfb9fb8ea_2026-10-26_18_43_56" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="940c4727-2cc8-474e-8eae-1417ac046fbb" testId="3c000031-2401-1ed1-276b-ac0028f66b99" testName="Taxi.Tests.StoreTests.Create_RejectsInvalidDistance(s: &quot;0&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0015690" startTime="2026-10-26T18:43:57.8814335+00:00" endTime="2026-10-26T18:43:57.8823470+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="940c4727-2cc8-474e-8eae-1417ac046fbb" />
+    <UnitTestResult executionId="10c0c320-180e-459e-8cf1-4015aec6086b" testId="89ef4922-3573-61e2-0367-003a30f6a88b" testName="Taxi.Tests.QuoteTests.Quote_FreeTariff" computerName="4c9dfb9fb8ea" duration="00:00:00.0008880" startTime="2026-10-26T18:43:56.1236135+00:00" endTime="2026-10-26T18:43:56.1237300+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10c0c320-180e-459e-8cf1-4015aec6086b" />
+    <UnitTestResult executionId="6bd50f62-98c7-419a-b926-d7838459cdc5" testId="72dc1d55-56bb-99fe-1ee8-49e2e0a7b334" testName="Taxi.Tests.QuoteTests.Quote_ComfortFourKm" computerName="4c9dfb9fb8ea" duration="00:00:00.0018144" startTime="2026-10-26T18:43:56.0730631+00:00" endTime="2026-10-26T18:43:56.0733071+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6bd50f62-98c7-419a-b926-d7838459cdc5" />
+    <UnitTestResult executionId="ec9e1be3-4e11-4762-81c3-11f797798665" testId="fdfc6195-46aa-a4f1-aff1-b20e211394e2" testName="Taxi.Tests.StoreTests.Storage_RoundsAndRetainsKopeck" computerName="4c9dfb9fb8ea" duration="00:00:00.0046299" startTime="2026-10-26T18:43:57.9375470+00:00" endTime="2026-10-26T18:43:57.9411510+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec9e1be3-4e11-4762-81c3-11f797798665" />
+    <UnitTestResult executionId="ff12dee6-44ac-402a-a2d1-da8cbfbc6520" testId="344f061f-c037-1c83-d3a1-228ae195ae79" testName="Taxi.Tests.StoreTests.Assignment_IsAtomic" computerName="4c9dfb9fb8ea" duration="00:00:00.6303819" startTime="2026-10-26T18:43:56.0142504+00:00" endTime="2026-10-26T18:43:56.2066423+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff12dee6-44ac-402a-a2d1-da8cbfbc6520" />
+    <UnitTestResult executionId="e9c5066a-3c10-47b3-b452-1cf875ff6f53" testId="9b1473f1-1a2e-f371-0979-7adade410a87" testName="Taxi.Tests.QuoteTests.Quote_InvalidTariff(b: -1, r: 20)" computerName="4c9dfb9fb8ea" duration="00:00:00.0307835" startTime="2026-10-26T18:43:56.0065009+00:00" endTime="2026-10-26T18:43:56.0190816+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9c5066a-3c10-47b3-b452-1cf875ff6f53" />
+    <UnitTestResult executionId="b5b770fc-dd79-4d61-82d8-b84e808c2695" testId="787ec8f1-cbe8-49f5-20d2-1c03c36c092e" testName="Taxi.Tests.StoreTests.Auth_ValidAndInvalid" computerName="4c9dfb9fb8ea" duration="00:00:01.4201942" startTime="2026-10-26T18:43:56.4523175+00:00" endTime="2026-10-26T18:43:57.8756909+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5b770fc-dd79-4d61-82d8-b84e808c2695" />
+    <UnitTestResult executionId="a241e2eb-73e2-4a5a-a359-814eeb609371" testId="55063799-7377-fdcb-5275-1fd8c742a337" testName="Taxi.Tests.QuoteTests.Quote_RepeatDoesNotMutate" computerName="4c9dfb9fb8ea" duration="00:00:00.0358638" startTime="2026-10-26T18:43:56.0715295+00:00" endTime="2026-10-26T18:43:56.0716321+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a241e2eb-73e2-4a5a-a359-814eeb609371" />
+    <UnitTestResult executionId="a27b008b-5018-4bdf-a5eb-0543ba44a3f6" testId="b8aeba70-1570-d88c-18d8-27059f7c1978" testName="Taxi.Tests.StoreTests.Create_RejectsEmptyFields(field: &quot;&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0028965" startTime="2026-10-26T18:43:57.9135751+00:00" endTime="2026-10-26T18:43:57.9202214+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a27b008b-5018-4bdf-a5eb-0543ba44a3f6" />
+    <UnitTestResult executionId="93d7beab-7b5e-4029-9005-02528211158c" testId="a9419df7-92a4-c95e-7349-c56865b81f27" testName="Taxi.Tests.StoreTests.Storage_ForeignKeysAndUniqueActive" computerName="4c9dfb9fb8ea" duration="00:00:00.0086458" startTime="2026-10-26T18:43:57.9253045+00:00" endTime="2026-10-26T18:43:57.9366537+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93d7beab-7b5e-4029-9005-02528211158c" />
+    <UnitTestResult executionId="2f2dd7bd-2513-4862-b33e-db048356a896" testId="d452cc35-203e-70ba-1cce-9f858ccaadfe" testName="Taxi.Tests.StoreTests.Assignment_ConcurrentRequests" computerName="4c9dfb9fb8ea" duration="00:00:00.2160720" startTime="2026-10-26T18:43:56.2076426+00:00" endTime="2026-10-26T18:43:56.4303826+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f2dd7bd-2513-4862-b33e-db048356a896" />
+    <UnitTestResult executionId="15e83e57-637b-44a1-9666-2eb939b657f5" testId="3710c8ec-3d92-c0f9-7a6a-009663ca8281" testName="Taxi.Tests.StoreTests.Create_RejectsInvalidDistance(s: &quot;1000.01&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0029835" startTime="2026-10-26T18:43:57.8763489+00:00" endTime="2026-10-26T18:43:57.8810957+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15e83e57-637b-44a1-9666-2eb939b657f5" />
+    <UnitTestResult executionId="6ee2fc18-a230-4956-8638-9f007d706da3" testId="2dee476d-2d34-45b4-7edd-06a5e9324845" testName="Taxi.Tests.StoreTests.Create_RejectsInvalidDistance(s: &quot;-1&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0034369" startTime="2026-10-26T18:43:57.8760400+00:00" endTime="2026-10-26T18:43:57.8762163+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ee2fc18-a230-4956-8638-9f007d706da3" />
+    <UnitTestResult executionId="17f4d00d-230f-4ad2-8298-51dbd189953a" testId="c3e6bb36-c2e9-9499-adc7-97ff8f106481" testName="Taxi.Tests.StoreTests.Roles_EnforceOwnership" computerName="4c9dfb9fb8ea" duration="00:00:00.0072424" startTime="2026-10-26T18:43:57.8842412+00:00" endTime="2026-10-26T18:43:57.8877434+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17f4d00d-230f-4ad2-8298-51dbd189953a" />
+    <UnitTestResult executionId="b3f7d93a-276e-40d1-ac77-c52dacd662fa" testId="2305ed92-8e4e-7a78-08d5-535e96a09775" testName="Taxi.Tests.QuoteTests.Quote_RejectsNegativeDistance" computerName="4c9dfb9fb8ea" duration="00:00:00.0048769" startTime="2026-10-26T18:43:56.0722314+00:00" endTime="2026-10-26T18:43:56.0725311+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3f7d93a-276e-40d1-ac77-c52dacd662fa" />
+    <UnitTestResult executionId="007be818-fb47-46ec-9fa0-cd2b67ea1adc" testId="3061e3a6-a06e-ef19-d3b6-4f667a2dd593" testName="Taxi.Tests.QuoteTests.Quote_RoundsHalfKopeck" computerName="4c9dfb9fb8ea" duration="00:00:00.0004845" startTime="2026-10-26T18:43:56.0739193+00:00" endTime="2026-10-26T18:43:56.0741627+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="007be818-fb47-46ec-9fa0-cd2b67ea1adc" />
+    <UnitTestResult executionId="c4f222f6-b0ef-4ff3-97c1-ace6b4241bdd" testId="3c67640c-7562-7a24-8f58-6e225a085efe" testName="Taxi.Tests.StoreTests.Create_ValidatesAndStores" computerName="4c9dfb9fb8ea" duration="00:00:00.0030523" startTime="2026-10-26T18:43:57.9368683+00:00" endTime="2026-10-26T18:43:57.9372602+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4f222f6-b0ef-4ff3-97c1-ace6b4241bdd" />
+    <UnitTestResult executionId="cd9e9e0c-4ff1-4b92-822c-9d144bc70e1c" testId="94796881-de20-ba24-68c8-da86b94d115b" testName="Taxi.Tests.QuoteTests.Quote_InvalidTariff(b: 1000001, r: 20)" computerName="4c9dfb9fb8ea" duration="00:00:00.1013438" startTime="2026-10-26T18:43:56.0649052+00:00" endTime="2026-10-26T18:43:56.0662841+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd9e9e0c-4ff1-4b92-822c-9d144bc70e1c" />
+    <UnitTestResult executionId="34442aa5-6595-42a8-b057-3c6b209cc112" testId="d5ec68ea-719f-1f59-20ff-d7f55bbbd662" testName="Taxi.Tests.QuoteTests.Quote_InvalidDistance(s: &quot;1000.01&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0019099" startTime="2026-10-26T18:43:56.1190165+00:00" endTime="2026-10-26T18:43:56.1198410+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34442aa5-6595-42a8-b057-3c6b209cc112" />
+    <UnitTestResult executionId="e648354b-30f5-4ee3-bf79-4e1221b638ab" testId="1865ee2d-3335-89ba-068d-3c01f59c09fc" testName="Taxi.Tests.StoreTests.Workflow_Completes" computerName="4c9dfb9fb8ea" duration="00:00:00.0074388" startTime="2026-10-26T18:43:57.8890089+00:00" endTime="2026-10-26T18:43:57.9031661+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e648354b-30f5-4ee3-bf79-4e1221b638ab" />
+    <UnitTestResult executionId="8bd5fd5c-1bea-4182-b3fa-4ee59465a969" testId="a72dc2a0-cc03-645c-89f9-a250be9bc77d" testName="Taxi.Tests.QuoteTests.Quote_InactiveOrEmpty" computerName="4c9dfb9fb8ea" duration="00:00:00.0029390" startTime="2026-10-26T18:43:56.1263186+00:00" endTime="2026-10-26T18:43:56.1268211+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8bd5fd5c-1bea-4182-b3fa-4ee59465a969" />
+    <UnitTestResult executionId="f95d28fa-b18f-48f0-8b5d-574437ac4daf" testId="df2e6a0c-eac4-01e9-68e9-437dec36cedb" testName="Taxi.Tests.QuoteTests.Quote_InvalidDistance(s: &quot;0&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0011009" startTime="2026-10-26T18:43:56.1217860+00:00" endTime="2026-10-26T18:43:56.1218738+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f95d28fa-b18f-48f0-8b5d-574437ac4daf" />
+    <UnitTestResult executionId="fbf04b60-ff0a-4b83-b4c0-1553f41c0850" testId="8ace4831-0b08-f5d1-b193-3d117e1f9fbe" testName="Taxi.Tests.QuoteTests.Quote_InvalidTariff(b: 100, r: -1)" computerName="4c9dfb9fb8ea" duration="00:00:00.0000405" startTime="2026-10-26T18:43:56.0678342+00:00" endTime="2026-10-26T18:43:56.0681877+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fbf04b60-ff0a-4b83-b4c0-1553f41c0850" />
+    <UnitTestResult executionId="01126e92-9e45-4af6-a0f0-d3a3e359dac6" testId="90cd6a44-3739-e986-8f2b-b80b9cf33cc8" testName="Taxi.Tests.StoreTests.Create_RejectsEmptyFields(field: &quot; &quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0060304" startTime="2026-10-26T18:43:57.9212326+00:00" endTime="2026-10-26T18:43:57.9248690+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01126e92-9e45-4af6-a0f0-d3a3e359dac6" />
+    <UnitTestResult executionId="1643a9ee-8e55-4884-8e35-591622d2de1e" testId="29de62e5-9ae3-d821-4bb0-ad55d6f28fd8" testName="Taxi.Tests.QuoteTests.Quote_Comparison" computerName="4c9dfb9fb8ea" duration="00:00:00.0656860" startTime="2026-10-26T18:43:56.0744037+00:00" endTime="2026-10-26T18:43:56.0744834+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1643a9ee-8e55-4884-8e35-591622d2de1e" />
+    <UnitTestResult executionId="1356441f-aeb4-41cd-bece-a48c2981225e" testId="e1eeca44-17ab-aa8a-d6da-263200280c4d" testName="Taxi.Tests.StoreTests.Storage_RoundTripAndRestart" computerName="4c9dfb9fb8ea" duration="00:00:00.0037554" startTime="2026-10-26T18:43:57.9091525+00:00" endTime="2026-10-26T18:43:57.9103169+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1356441f-aeb4-41cd-bece-a48c2981225e" />
+    <UnitTestResult executionId="fdefc1da-0068-45e8-9ff0-fc9ce7eef10d" testId="81a2951d-6800-43d7-a18a-7f71f117796b" testName="Taxi.Tests.StoreTests.Create_UnknownTariffRollsBack" computerName="4c9dfb9fb8ea" duration="00:00:00.0045215" startTime="2026-10-26T18:43:57.9039481+00:00" endTime="2026-10-26T18:43:57.9087931+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdefc1da-0068-45e8-9ff0-fc9ce7eef10d" />
+    <UnitTestResult executionId="b32d82d1-53a7-4abb-8013-33e5c1243ee1" testId="a83f596a-4e07-6343-cae3-29f6a67fb504" testName="Taxi.Tests.StoreTests.Workflow_RejectsInvalidTransitions" computerName="4c9dfb9fb8ea" duration="00:00:00.0070100" startTime="2026-10-26T18:43:57.9034569+00:00" endTime="2026-10-26T18:43:57.9037085+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b32d82d1-53a7-4abb-8013-33e5c1243ee1" />
+    <UnitTestResult executionId="4bdb1890-642a-4ae1-8929-50a887466f1a" testId="28400d0d-243f-e6e8-396b-72f0eb652c0f" testName="Taxi.Tests.QuoteTests.Quote_InvalidDistance(s: &quot;0.001&quot;)" computerName="4c9dfb9fb8ea" duration="00:00:00.0005186" startTime="2026-10-26T18:43:56.1213081+00:00" endTime="2026-10-26T18:43:56.1214458+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bdb1890-642a-4ae1-8929-50a887466f1a" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InvalidTariff(b: 100, r: -1)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="8ace4831-0b08-f5d1-b193-3d117e1f9fbe">
+      <Execution id="fbf04b60-ff0a-4b83-b4c0-1553f41c0850" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InvalidTariff" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InvalidTariff(b: 1000001, r: 20)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="94796881-de20-ba24-68c8-da86b94d115b">
+      <Execution id="cd9e9e0c-4ff1-4b92-822c-9d144bc70e1c" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InvalidTariff" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InvalidTariff(b: -1, r: 20)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="9b1473f1-1a2e-f371-0979-7adade410a87">
+      <Execution id="e9c5066a-3c10-47b3-b452-1cf875ff6f53" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InvalidTariff" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_ComfortFourKm" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="72dc1d55-56bb-99fe-1ee8-49e2e0a7b334">
+      <Execution id="6bd50f62-98c7-419a-b926-d7838459cdc5" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_ComfortFourKm" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Storage_RoundsAndRetainsKopeck" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="fdfc6195-46aa-a4f1-aff1-b20e211394e2">
+      <Execution id="ec9e1be3-4e11-4762-81c3-11f797798665" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Storage_RoundsAndRetainsKopeck" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_ValidatesAndStores" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="3c67640c-7562-7a24-8f58-6e225a085efe">
+      <Execution id="c4f222f6-b0ef-4ff3-97c1-ace6b4241bdd" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_ValidatesAndStores" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_Comparison" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="29de62e5-9ae3-d821-4bb0-ad55d6f28fd8">
+      <Execution id="1643a9ee-8e55-4884-8e35-591622d2de1e" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_Comparison" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_RejectsEmptyFields(field: &quot;&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="b8aeba70-1570-d88c-18d8-27059f7c1978">
+      <Execution id="a27b008b-5018-4bdf-a5eb-0543ba44a3f6" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_RejectsEmptyFields" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_RejectsInvalidDistance(s: &quot;-1&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="2dee476d-2d34-45b4-7edd-06a5e9324845">
+      <Execution id="6ee2fc18-a230-4956-8638-9f007d706da3" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_RejectsInvalidDistance" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Auth_ValidAndInvalid" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="787ec8f1-cbe8-49f5-20d2-1c03c36c092e">
+      <Execution id="b5b770fc-dd79-4d61-82d8-b84e808c2695" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Auth_ValidAndInvalid" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InactiveOrEmpty" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="a72dc2a0-cc03-645c-89f9-a250be9bc77d">
+      <Execution id="8bd5fd5c-1bea-4182-b3fa-4ee59465a969" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InactiveOrEmpty" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_RoundsHalfKopeck" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="3061e3a6-a06e-ef19-d3b6-4f667a2dd593">
+      <Execution id="007be818-fb47-46ec-9fa0-cd2b67ea1adc" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_RoundsHalfKopeck" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_RejectsInvalidDistance(s: &quot;1000.01&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="3710c8ec-3d92-c0f9-7a6a-009663ca8281">
+      <Execution id="15e83e57-637b-44a1-9666-2eb939b657f5" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_RejectsInvalidDistance" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_RejectsInvalidDistance(s: &quot;0&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="3c000031-2401-1ed1-276b-ac0028f66b99">
+      <Execution id="940c4727-2cc8-474e-8eae-1417ac046fbb" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_RejectsInvalidDistance" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_FreeTariff" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="89ef4922-3573-61e2-0367-003a30f6a88b">
+      <Execution id="10c0c320-180e-459e-8cf1-4015aec6086b" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_FreeTariff" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_UnknownTariffRollsBack" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="81a2951d-6800-43d7-a18a-7f71f117796b">
+      <Execution id="fdefc1da-0068-45e8-9ff0-fc9ce7eef10d" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_UnknownTariffRollsBack" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Workflow_RejectsInvalidTransitions" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="a83f596a-4e07-6343-cae3-29f6a67fb504">
+      <Execution id="b32d82d1-53a7-4abb-8013-33e5c1243ee1" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Workflow_RejectsInvalidTransitions" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Assignment_ConcurrentRequests" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="d452cc35-203e-70ba-1cce-9f858ccaadfe">
+      <Execution id="2f2dd7bd-2513-4862-b33e-db048356a896" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Assignment_ConcurrentRequests" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_RepeatDoesNotMutate" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="55063799-7377-fdcb-5275-1fd8c742a337">
+      <Execution id="a241e2eb-73e2-4a5a-a359-814eeb609371" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_RepeatDoesNotMutate" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Storage_RoundTripAndRestart" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="e1eeca44-17ab-aa8a-d6da-263200280c4d">
+      <Execution id="1356441f-aeb4-41cd-bece-a48c2981225e" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Storage_RoundTripAndRestart" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InvalidDistance(s: &quot;1000.01&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="d5ec68ea-719f-1f59-20ff-d7f55bbbd662">
+      <Execution id="34442aa5-6595-42a8-b057-3c6b209cc112" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InvalidDistance" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InvalidDistance(s: &quot;0&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="df2e6a0c-eac4-01e9-68e9-437dec36cedb">
+      <Execution id="f95d28fa-b18f-48f0-8b5d-574437ac4daf" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InvalidDistance" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Create_RejectsEmptyFields(field: &quot; &quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="90cd6a44-3739-e986-8f2b-b80b9cf33cc8">
+      <Execution id="01126e92-9e45-4af6-a0f0-d3a3e359dac6" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Create_RejectsEmptyFields" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_RejectsNegativeDistance" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="2305ed92-8e4e-7a78-08d5-535e96a09775">
+      <Execution id="b3f7d93a-276e-40d1-ac77-c52dacd662fa" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_RejectsNegativeDistance" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Assignment_IsAtomic" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="344f061f-c037-1c83-d3a1-228ae195ae79">
+      <Execution id="ff12dee6-44ac-402a-a2d1-da8cbfbc6520" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Assignment_IsAtomic" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Roles_EnforceOwnership" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="c3e6bb36-c2e9-9499-adc7-97ff8f106481">
+      <Execution id="17f4d00d-230f-4ad2-8298-51dbd189953a" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Roles_EnforceOwnership" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Storage_ForeignKeysAndUniqueActive" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="a9419df7-92a4-c95e-7349-c56865b81f27">
+      <Execution id="93d7beab-7b5e-4029-9005-02528211158c" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Storage_ForeignKeysAndUniqueActive" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.StoreTests.Workflow_Completes" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="1865ee2d-3335-89ba-068d-3c01f59c09fc">
+      <Execution id="e648354b-30f5-4ee3-bf79-4e1221b638ab" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.StoreTests" name="Workflow_Completes" />
+    </UnitTest>
+    <UnitTest name="Taxi.Tests.QuoteTests.Quote_InvalidDistance(s: &quot;0.001&quot;)" storage="/workspace/output/taxiweb_labs/tests/taxi.tests/bin/release/net10.0/taxi.tests.dll" id="28400d0d-243f-e6e8-396b-72f0eb652c0f">
+      <Execution id="4bdb1890-642a-4ae1-8929-50a887466f1a" />
+      <TestMethod codeBase="/workspace/output/TaxiWeb_Labs/tests/Taxi.Tests/bin/Release/net10.0/Taxi.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Taxi.Tests.QuoteTests" name="Quote_InvalidDistance" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="3c000031-2401-1ed1-276b-ac0028f66b99" executionId="940c4727-2cc8-474e-8eae-1417ac046fbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89ef4922-3573-61e2-0367-003a30f6a88b" executionId="10c0c320-180e-459e-8cf1-4015aec6086b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72dc1d55-56bb-99fe-1ee8-49e2e0a7b334" executionId="6bd50f62-98c7-419a-b926-d7838459cdc5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fdfc6195-46aa-a4f1-aff1-b20e211394e2" executionId="ec9e1be3-4e11-4762-81c3-11f797798665" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="344f061f-c037-1c83-d3a1-228ae195ae79" executionId="ff12dee6-44ac-402a-a2d1-da8cbfbc6520" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b1473f1-1a2e-f371-0979-7adade410a87" executionId="e9c5066a-3c10-47b3-b452-1cf875ff6f53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="787ec8f1-cbe8-49f5-20d2-1c03c36c092e" executionId="b5b770fc-dd79-4d61-82d8-b84e808c2695" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55063799-7377-fdcb-5275-1fd8c742a337" executionId="a241e2eb-73e2-4a5a-a359-814eeb609371" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8aeba70-1570-d88c-18d8-27059f7c1978" executionId="a27b008b-5018-4bdf-a5eb-0543ba44a3f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9419df7-92a4-c95e-7349-c56865b81f27" executionId="93d7beab-7b5e-4029-9005-02528211158c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d452cc35-203e-70ba-1cce-9f858ccaadfe" executionId="2f2dd7bd-2513-4862-b33e-db048356a896" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3710c8ec-3d92-c0f9-7a6a-009663ca8281" executionId="15e83e57-637b-44a1-9666-2eb939b657f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2dee476d-2d34-45b4-7edd-06a5e9324845" executionId="6ee2fc18-a230-4956-8638-9f007d706da3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3e6bb36-c2e9-9499-adc7-97ff8f106481" executionId="17f4d00d-230f-4ad2-8298-51dbd189953a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2305ed92-8e4e-7a78-08d5-535e96a09775" executionId="b3f7d93a-276e-40d1-ac77-c52dacd662fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3061e3a6-a06e-ef19-d3b6-4f667a2dd593" executionId="007be818-fb47-46ec-9fa0-cd2b67ea1adc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c67640c-7562-7a24-8f58-6e225a085efe" executionId="c4f222f6-b0ef-4ff3-97c1-ace6b4241bdd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94796881-de20-ba24-68c8-da86b94d115b" executionId="cd9e9e0c-4ff1-4b92-822c-9d144bc70e1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5ec68ea-719f-1f59-20ff-d7f55bbbd662" executionId="34442aa5-6595-42a8-b057-3c6b209cc112" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1865ee2d-3335-89ba-068d-3c01f59c09fc" executionId="e648354b-30f5-4ee3-bf79-4e1221b638ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a72dc2a0-cc03-645c-89f9-a250be9bc77d" executionId="8bd5fd5c-1bea-4182-b3fa-4ee59465a969" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df2e6a0c-eac4-01e9-68e9-437dec36cedb" executionId="f95d28fa-b18f-48f0-8b5d-574437ac4daf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ace4831-0b08-f5d1-b193-3d117e1f9fbe" executionId="fbf04b60-ff0a-4b83-b4c0-1553f41c0850" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90cd6a44-3739-e986-8f2b-b80b9cf33cc8" executionId="01126e92-9e45-4af6-a0f0-d3a3e359dac6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29de62e5-9ae3-d821-4bb0-ad55d6f28fd8" executionId="1643a9ee-8e55-4884-8e35-591622d2de1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1eeca44-17ab-aa8a-d6da-263200280c4d" executionId="1356441f-aeb4-41cd-bece-a48c2981225e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="81a2951d-6800-43d7-a18a-7f71f117796b" executionId="fdefc1da-0068-45e8-9ff0-fc9ce7eef10d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a83f596a-4e07-6343-cae3-29f6a67fb504" executionId="b32d82d1-53a7-4abb-8013-33e5c1243ee1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="28400d0d-243f-e6e8-396b-72f0eb652c0f" executionId="4bdb1890-642a-4ae1-8929-50a887466f1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="29" executed="29" passed="29" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.02] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.14)
+[xUnit.net 00:00:11.65]   Discovering: Taxi.Tests
+[xUnit.net 00:00:18.82]   Discovered:  Taxi.Tests
+[xUnit.net 00:00:19.04]   Starting:    Taxi.Tests
+[xUnit.net 00:00:21.67]   Finished:    Taxi.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

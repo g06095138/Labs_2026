@@ -1,0 +1,41 @@
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Antiforgery;
+using Taxi.Application;
+using Taxi.Domain;
+using Taxi.Infrastructure;
+using Taxi.Web.Components;
+var builder=WebApplication.CreateBuilder(args);
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddCascadingAuthenticationState();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(o=> {
+    o.LoginPath="/login"; o.Cookie.HttpOnly=true; o.Cookie.SameSite=SameSiteMode.Lax; o.ExpireTimeSpan=TimeSpan.FromHours(4);
+});
+builder.Services.AddAuthorization();
+string db=builder.Configuration["TaxiDb"]??Path.Combine(builder.Environment.ContentRootPath,"App_Data","taxi.db");
+var store=new SqliteStore(db);store.Initialize();var users=new UserStore(store);users.SeedDemoUsers();
+builder.Services.AddSingleton(store);builder.Services.AddSingleton<ITaxiStore>(store);builder.Services.AddSingleton(users);
+builder.Services.AddSingleton<QuoteService>();builder.Services.AddScoped<TaxiService>();
+var app=builder.Build();
+if(!app.Environment.IsDevelopment()) app.UseExceptionHandler("/error");
+app.UseStaticFiles();app.UseAuthentication();app.UseAuthorization();app.UseAntiforgery();
+app.MapGet("/health",()=>Results.Ok(new {status="ok"}));
+app.MapGet("/error",()=>Results.Problem("Внутренняя ошибка. Повторите попытку позже."));
+app.MapPost("/account/login",async (HttpContext context,UserStore userStore,IAntiforgery antiforgery)=> {
+    await antiforgery.ValidateRequestAsync(context);
+    var form=await context.Request.ReadFormAsync();
+    var actor=userStore.Authenticate(form["login"].ToString(),form["password"].ToString());
+    if(actor is null) return Results.LocalRedirect("/login?error=1");
+    var claims=new List<Claim>{new(ClaimTypes.NameIdentifier,actor.UserId),new(ClaimTypes.Name,form["login"].ToString()),new(ClaimTypes.Role,actor.Role.ToString())};
+    if(actor.ClientId is not null) claims.Add(new("client_id",actor.ClientId));
+    if(actor.DriverId is not null) claims.Add(new("driver_id",actor.DriverId));
+    await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,new ClaimsPrincipal(new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme)));
+    return Results.LocalRedirect("/");
+});
+app.MapPost("/account/logout",async(HttpContext context,IAntiforgery antiforgery)=> {
+    await antiforgery.ValidateRequestAsync(context);await context.SignOutAsync();return Results.LocalRedirect("/login");
+});
+app.MapStaticAssets();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
+app.Run();

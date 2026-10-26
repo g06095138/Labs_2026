@@ -1,0 +1,19 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam componentStyle rectangle
+component "UI\nBlazor Web App\nВвод, результат, cookie-вход" as UI
+component "Application\nTaxiService\nITaxiStore, Actor, Role" as Application
+component "Domain\nQuoteService, TripInput\nOrder, Tariff, Quote" as Domain
+component "Infrastructure\nSqliteStore, UserStore\nТранзакции, схема, пароли" as Infrastructure
+database "SQLite\nClients / Drivers / Tariffs\nOrders / Users" as DB
+UI --> Application : вызовы сценариев
+Application --> Domain : модель и правила
+Infrastructure ..> Application : реализует ITaxiStore
+Infrastructure --> Domain : модели
+Infrastructure --> DB : SQL
+UI ..> Infrastructure : только Program.cs / DI
+note bottom of Domain
+Не зависит от UI,
+Application или БД
+end note
+@enduml

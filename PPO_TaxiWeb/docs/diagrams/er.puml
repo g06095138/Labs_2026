@@ -1,0 +1,66 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+hide circle
+entity Clients {
+ * id : TEXT <<PK>>
+ --
+ full_name : TEXT NOT NULL
+ phone : TEXT NOT NULL
+}
+entity Drivers {
+ * id : TEXT <<PK>>
+ --
+ full_name : TEXT NOT NULL
+ car_name : TEXT NOT NULL
+ car_number : TEXT NOT NULL
+ is_available : INTEGER CHECK 0/1
+}
+entity Tariffs {
+ * id : TEXT <<PK>>
+ --
+ name : TEXT UNIQUE
+ base_kopecks : INTEGER >=0
+ rate_kopecks : INTEGER >=0
+ is_active : INTEGER CHECK 0/1
+}
+entity Orders {
+ * id : TEXT <<PK>>
+ --
+ * client_id : TEXT <<FK>>
+ driver_id : TEXT NULL <<FK>>
+ * tariff_id : TEXT <<FK>>
+ pickup : TEXT NOT NULL
+ destination : TEXT NOT NULL
+ distance_hundredths : INTEGER 1..100000
+ base_kopecks : INTEGER >=0
+ rate_kopecks : INTEGER >=0
+ cost_kopecks : INTEGER >=0
+ status : TEXT CHECK
+ created_at : TEXT UTC
+}
+entity Users {
+ * id : TEXT <<PK>>
+ --
+ login : TEXT UNIQUE NOT NULL
+ password_hash : TEXT NOT NULL
+ role : TEXT CHECK
+ client_id : TEXT NULL UNIQUE <<FK>>
+ driver_id : TEXT NULL UNIQUE <<FK>>
+}
+Clients ||--o{ Orders
+Tariffs ||--o{ Orders
+Drivers |o--o{ Orders
+Clients |o--o| Users
+Drivers |o--o| Users
+note bottom of Users
+CHECK: Client связан с клиентом;
+Driver связан с водителем;
+Dispatcher без обоих профилей.
+end note
+note bottom of Orders
+FK: ON DELETE RESTRICT.
+UNIQUE driver_id для Assigned/InProgress.
+Created: водитель NULL; иначе NOT NULL.
+Стоимость — целые копейки.
+end note
+@enduml

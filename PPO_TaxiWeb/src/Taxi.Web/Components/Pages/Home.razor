@@ -1,0 +1,70 @@
+@page "/"
+@attribute [Authorize]
+@rendermode InteractiveServer
+@inject AuthenticationStateProvider Auth
+@inject TaxiService Service
+@inject ILogger<Home> Logger
+<PageTitle>Служба такси</PageTitle>
+<main><header><div><p class="eyebrow">СЛУЖБА ТАКСИ</p><h1>@RoleTitle</h1></div><form method="post" action="/account/logout" data-enhance="false"><AntiforgeryToken /><button class="secondary">Выйти</button></form></header>
+@if(actor is null){<p>Загрузка…</p>} else {
+<fieldset disabled="@(!interactive)" style="border:0;padding:0;margin:0;min-width:0">
+@if(message is not null){<p role="status" class="notice">@message</p>}
+@if(error is not null){<p role="alert" class="error">@error</p>}
+@if(actor.Role==Role.Client){
+<section><h2>Новая поездка</h2><div class="fields">
+<label>ФИО<input value="@fullName" @oninput="e=>Change(ref fullName,e)" maxlength="150"/></label>
+<label>Телефон<input value="@phone" @oninput="e=>Change(ref phone,e)" maxlength="50"/></label>
+<label>Откуда<input value="@pickup" @oninput="e=>Change(ref pickup,e)" maxlength="500"/></label>
+<label>Куда<input value="@destination" @oninput="e=>Change(ref destination,e)" maxlength="500"/></label>
+<label>Расстояние, км<input value="@distanceText" @oninput="e=>Change(ref distanceText,e)" inputmode="decimal"/></label>
+</div><button @onclick="Compare" disabled="@busy">Сравнить тарифы</button>
+@if(quotes is not null){
+<table><thead><tr><th>Тариф</th><th>Базовая цена</th><th>За расстояние</th><th>Итого</th><th>Выбор</th></tr></thead><tbody>
+@foreach(var q in quotes){<tr><td>@q.Name</td><td>@Money(q.BasePrice)</td><td>@Money(q.VariablePrice)</td><td>@Money(q.Total)</td><td><input aria-label="@q.Name" type="radio" name="tariff" checked="@(selectedTariff==q.TariffId)" @onchange="()=>selectedTariff=q.TariffId"/></td></tr>}
+</tbody></table><button @onclick="Create" disabled="@busy">Создать заказ</button>}
+</section>}
+<section><header><h2>@(actor.Role==Role.Driver?"Мои активные заказы":"Заказы")</h2><button class="secondary" @onclick="Refresh" disabled="@busy">Обновить</button></header>
+@if(actor.Role==Role.Dispatcher){<label>Свободный водитель<select aria-label="Свободный водитель" @bind="selectedDriver"><option value="">Выберите водителя</option>@foreach(var d in drivers){<option value="@d.Id">@d.FullName — @d.CarName (@d.CarNumber)</option>}</select></label>}
+@if(orders.Count==0){<p class="muted">Заказов пока нет.</p>}else{
+<div class="scroll"><table><thead><tr><th>Номер</th><th>Откуда → куда</th><th>Км</th><th>Стоимость</th><th>Статус</th><th>Водитель</th><th>Действие</th></tr></thead><tbody>
+@foreach(var o in orders){<tr><td title="@o.Id">@o.Id[..8]</td><td>@o.Pickup → @o.Destination</td><td>@o.DistanceKm</td><td>@Money(o.Cost)</td><td>@Status(o.Status)</td><td>@(o.DriverId??"Не назначен")</td><td>
+@if(actor.Role==Role.Dispatcher && o.Status==OrderStatus.Created){<button @onclick="()=>Assign(o.Id)" disabled="@busy">Назначить</button>}
+@if(actor.Role==Role.Driver && o.Status==OrderStatus.Assigned){<button @onclick="()=>Start(o.Id)" disabled="@busy">Начать</button>}
+@if(actor.Role==Role.Driver && o.Status==OrderStatus.InProgress){<button @onclick="()=>Complete(o.Id)" disabled="@busy">Завершить</button>}
+</td></tr>}
+</tbody></table></div>}
+</section></fieldset>}
+</main>
+@code {
+    private Actor? actor;
+    private string fullName="",phone="",pickup="",destination="",distanceText="4",selectedTariff="",selectedDriver="";
+    private string? error,message;
+    private bool busy;
+    private bool interactive;
+    protected override void OnAfterRender(bool firstRender){if(firstRender){interactive=true;StateHasChanged();}}
+    private IReadOnlyList<Quote>? quotes;
+    private IReadOnlyList<Order> orders=[];
+    private IReadOnlyList<Driver> drivers=[];
+    private string RoleTitle=>actor?.Role switch{Role.Client=>"Заказать поездку",Role.Dispatcher=>"Рабочее место диспетчера",Role.Driver=>"Рабочее место водителя",_=>"Служба такси"};
+    protected override async Task OnInitializedAsync(){
+        var user=(await Auth.GetAuthenticationStateAsync()).User;
+        if(user.Identity?.IsAuthenticated!=true)return;
+        actor=new(user.FindFirstValue(ClaimTypes.NameIdentifier)!,Enum.Parse<Role>(user.FindFirstValue(ClaimTypes.Role)!),user.FindFirstValue("client_id"),user.FindFirstValue("driver_id"));
+        Refresh();
+    }
+    private void Change(ref string target,ChangeEventArgs e){target=e.Value?.ToString()??"";quotes=null;selectedTariff="";error=null;message=null;}
+    private decimal Distance(){
+        if(!decimal.TryParse(distanceText.Replace(',','.'),NumberStyles.AllowDecimalPoint|NumberStyles.AllowLeadingSign,CultureInfo.InvariantCulture,out var result))throw new RuleException("DistanceKm","Введите число километров.");return result;
+    }
+    private void Run(Action action){if(busy)return;busy=true;error=null;message=null;try{action();}catch(RuleException ex){error=$"{Field(ex.Field)}: {ex.Message}";}catch(Exception ex){Logger.LogError(ex,"Ошибка операции такси");error="Операция не выполнена. Обновите данные и повторите попытку.";}finally{busy=false;}}
+    private void Compare()=>Run(()=>{quotes=null;new TripInput(fullName,phone,pickup,destination,Distance(),"preview").Validate();quotes=Service.Compare(actor!,Distance());selectedTariff=quotes[0].TariffId;});
+    private void Create()=>Run(()=>{if(quotes is null)throw new RuleException("Quote","Сначала сравните тарифы.");var o=Service.Create(actor!,new(fullName,phone,pickup,destination,Distance(),selectedTariff));quotes=null;RefreshData();message=$"Заказ {o.Id[..8]} создан. Стоимость {Money(o.Cost)}.";});
+    private void Refresh()=>Run(RefreshData);
+    private void RefreshData(){orders=Service.List(actor!);if(actor!.Role==Role.Dispatcher){drivers=Service.FreeDrivers(actor);if(!drivers.Any(d=>d.Id==selectedDriver))selectedDriver="";}}
+    private void Assign(string id)=>Run(()=>{if(selectedDriver=="")throw new RuleException("Driver","Выберите водителя.");Service.Assign(actor!,id,selectedDriver);RefreshData();message="Водитель назначен.";});
+    private void Start(string id)=>Run(()=>{Service.Start(actor!,id);RefreshData();message="Поездка начата.";});
+    private void Complete(string id)=>Run(()=>{Service.Complete(actor!,id);RefreshData();message="Поездка завершена.";});
+    private static string Money(decimal v)=>v.ToString("F2",CultureInfo.GetCultureInfo("ru-RU"))+" ₽";
+    private static string Status(OrderStatus s)=>s switch{OrderStatus.Created=>"Создан",OrderStatus.Assigned=>"Водитель назначен",OrderStatus.InProgress=>"В пути",_=>"Завершён"};
+    private static string Field(string f)=>f switch{"FullName"=>"ФИО","Phone"=>"Телефон","Pickup"=>"Адрес подачи","Destination"=>"Адрес назначения","DistanceKm"=>"Расстояние","Tariff" or "TariffId"=>"Тариф","Driver"=>"Водитель","Status"=>"Статус","Role"=>"Доступ",_=>f};
+}

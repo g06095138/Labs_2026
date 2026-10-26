@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "Unauthenticated home denied",
+    "Invalid login rejected",
+    "Comparison 4 km: comfort 270.00",
+    "Editing hides stale quote",
+    "Recalculation 10 km: comfort 450.00",
+    "Invalid distance rejected without stale result",
+    "Order created at fixed 270.00",
+    "Second independent order created",
+    "Other client cannot see first client orders",
+    "Dispatcher assigns and busy driver disappears",
+    "Other driver cannot see assigned order",
+    "Driver starts and completes own order",
+    "Completed trip releases driver",
+    "Client sees completed order at original price",
+    "No browser page errors"
+  ],
+  "count": 15,
+  "order_id": "1ed2e73db31f49e3b61501a4b7d45596",
+  "browser_errors": []
+}

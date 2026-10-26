@@ -1,0 +1,12 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+[*] --> Created : Клиент создаёт заказ\nФиксируется цена
+Created --> Assigned : Диспетчер назначает\nсвободного водителя
+Assigned --> InProgress : Свой водитель начинает
+InProgress --> Completed : Свой водитель завершает\nВодитель освобождён
+Completed --> [*]
+note right of Assigned
+Назначение атомарно.
+Один активный заказ на водителя.
+end note
+@enduml

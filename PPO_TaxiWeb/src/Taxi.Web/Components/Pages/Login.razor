@@ -1,0 +1,10 @@
+@page "/login"
+<PageTitle>Вход — Служба такси</PageTitle>
+<main class="login"><p class="eyebrow">СЛУЖБА ТАКСИ</p><h1>Вход в систему</h1>
+@if (Error is not null) { <p role="alert" class="error">Неверный логин или пароль.</p> }
+<form method="post" action="/account/login" data-enhance="false"><AntiforgeryToken />
+<label>Логин<input name="login" autocomplete="username" required maxlength="100"/></label>
+<label>Пароль<input name="password" type="password" autocomplete="current-password" required maxlength="200"/></label>
+<button type="submit">Войти</button></form>
+<p class="muted">Учебный стенд. Данные для входа приведены в README проекта.</p></main>
+@code { [SupplyParameterFromQuery(Name="error")] public string? Error {get;set;} }

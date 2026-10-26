@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><ItemGroup><ProjectReference Include="../Taxi.Domain/Taxi.Domain.csproj" /><ProjectReference Include="../Taxi.Application/Taxi.Application.csproj" /></ItemGroup><ItemGroup><PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" /></ItemGroup></Project>
