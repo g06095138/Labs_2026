@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+skinparam defaultFontName DejaVu Sans
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam usecaseBackgroundColor #EDF4FA
+skinparam usecaseBorderColor #31526F
+title ЛР1. Финансовое планирование службы такси
+actor "Руководитель службы такси\n(финансовый директор)" as Director
+rectangle "Сайт «Служба такси»\nМодуль финансового планирования" {
+ usecase "С1. Создать или изменить план\nи рассчитать прогноз" as Calculate
+ usecase "С2. Сравнить два плана" as Compare
+ usecase "С3. Сохранить и открыть план" as Store
+}
+Director -- Calculate
+Director -- Compare
+Director -- Store
+note bottom of Director
+Планируемая роль аналитического модуля.
+В текущем сайте не реализована.
+end note
+@enduml
