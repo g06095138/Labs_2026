@@ -1,0 +1,19 @@
+{
+  "count": 13,
+  "passed": [
+    "forecast plan-a: monthly count and all summary fields",
+    "forecast plan-b: monthly count and all summary fields",
+    "forecast plan-c: monthly count and all summary fields",
+    "forecast varied-months: monthly count and all summary fields",
+    "compare two files: independent results",
+    "A=101: nonzero exit and exact field",
+    "fractional quantity: input rejected",
+    "fractional payment percent: input rejected",
+    "unknown field: input rejected",
+    "missing months: input rejected",
+    "duplicate key: input rejected",
+    "same plan comparison rejected",
+    "missing input file rejected"
+  ],
+  "failed": 0
+}

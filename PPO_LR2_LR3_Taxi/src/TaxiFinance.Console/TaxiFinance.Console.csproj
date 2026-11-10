@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType></PropertyGroup><ItemGroup><ProjectReference Include="../TaxiFinance.Domain/TaxiFinance.Domain.csproj" /><ProjectReference Include="../TaxiFinance.Application/TaxiFinance.Application.csproj" /></ItemGroup></Project>

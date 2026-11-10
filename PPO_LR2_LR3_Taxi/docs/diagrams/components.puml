@@ -1,0 +1,33 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam backgroundColor white
+
+skinparam componentStyle rectangle
+title ЛР2. Компоненты финансового модуля службы такси
+component "UI\nBlazor Web App\n(ЛР5, проект)" as UI #F3F4F6
+component "Console\nВвод JSON / контрольных планов\nФорматирование вывода (ЛР3)" as Console #EAF2FA
+package "Application (ЛР3)" {
+ component "ForecastService\nComparisonService" as App #EAF2FA
+ interface "IPlanRepository" as Repo
+}
+component "Domain (ЛР3)\nFinancialPlan, MonthParameters\nPlanValidator, FinancialCalculator\nОтчёты и итоги" as Domain #EAF2FA
+component "Infrastructure\nSqlitePlanRepository\n(ЛР4, проект)" as Infra #F3F4F6
+database "SQLite\nPlan + MonthPlan\n(ЛР4, проект)" as DB
+Console --> App : вызывает
+UI --> App : вызывает
+App --> Domain : модель / формулы
+Infra ..|> Repo : реализует
+Infra --> Domain : типы входов
+Infra --> DB : атомарное сохранение
+UI ..> Infra : только composition root / DI
+note bottom of Domain
+Domain не зависит от Application,
+UI, интерфейса хранилища или SQLite.
+end note
+note bottom of Repo
+Интерфейс объявлен в Application.
+В ЛР3 сохраняющая реализация отсутствует.
+end note
+@enduml

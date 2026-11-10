@@ -1,0 +1,31 @@
+{
+  "Id": "44444444-4444-4444-8444-444444444444",
+  "Name": "Такси — разные месяцы",
+  "InitialCash": 10000,
+  "Months": [
+    {
+      "Number": 1,
+      "Quantity": 100,
+      "Price": 300,
+      "VariableCost": 100,
+      "FixedCost": 5000,
+      "PaymentPercent": 50
+    },
+    {
+      "Number": 2,
+      "Quantity": 50,
+      "Price": 400,
+      "VariableCost": 120,
+      "FixedCost": 6000,
+      "PaymentPercent": 0
+    },
+    {
+      "Number": 3,
+      "Quantity": 80,
+      "Price": 250,
+      "VariableCost": 90,
+      "FixedCost": 7000,
+      "PaymentPercent": 100
+    }
+  ]
+}

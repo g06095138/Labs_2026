@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "taxifinance.application": {
+        "type": "Project",
+        "dependencies": {
+          "TaxiFinance.Domain": "[1.0.0, )"
+        }
+      },
+      "taxifinance.domain": {
+        "type": "Project"
+      }
+    }
+  }
+}
