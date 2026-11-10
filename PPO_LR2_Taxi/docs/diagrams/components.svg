@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="740" viewBox="0 0 1380 740" role="img" aria-labelledby="title desc"><title id="title">Диаграмма компонентов — Служба такси</title><desc id="desc">UI вызывает Application; Application зависит от Domain. Infrastructure реализует IPlanRepository и использует Domain и SQLite.</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#444"/></marker></defs><rect width="1380" height="740" fill="white"/><style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#222}.title{font-size:27px;font-weight:700}.head{font-size:19px;font-weight:700}.body{font-size:18px}.edge{font-size:16px;fill:#555}</style>
+<text x="690" y="42" class="title" text-anchor="middle">Диаграмма компонентов — Служба такси</text>
+<rect x="28" y="132" width="290" height="222" fill="white" stroke="#444" stroke-width="1.6"/><rect x="28" y="132" width="290" height="44" fill="#eee" stroke="#444" stroke-width="1.6"/>
+<text x="173.0" y="160" class="head" text-anchor="middle">UI — TaxiFinance.Web</text>
+<text x="44" y="208" class="body" text-anchor="start">Blazor Web App (ЛР5)</text>
+<text x="44" y="238" class="body" text-anchor="start">Редактирование трёх месяцев</text>
+<text x="44" y="268" class="body" text-anchor="start">Прогноз, список и сравнение</text>
+<text x="44" y="298" class="body" text-anchor="start">Сообщения об ошибках</text>
+<rect x="420" y="90" width="420" height="300" fill="white" stroke="#444" stroke-width="1.6"/><rect x="420" y="90" width="420" height="44" fill="#eee" stroke="#444" stroke-width="1.6"/>
+<text x="630.0" y="118" class="head" text-anchor="middle">Application — TaxiFinance.Application</text>
+<text x="436" y="166" class="body" text-anchor="start">ForecastService</text>
+<text x="436" y="196" class="body" text-anchor="start">ComparisonService</text>
+<text x="436" y="226" class="body" text-anchor="start">Порт: IPlanRepository</text>
+<text x="436" y="256" class="body" text-anchor="start">Выполнение сценариев</text>
+<text x="436" y="286" class="body" text-anchor="start">Вызов Domain</text>
+<rect x="956" y="124" width="400" height="258" fill="white" stroke="#444" stroke-width="1.6"/><rect x="956" y="124" width="400" height="44" fill="#eee" stroke="#444" stroke-width="1.6"/>
+<text x="1156.0" y="152" class="head" text-anchor="middle">Domain — TaxiFinance.Domain</text>
+<text x="972" y="200" class="body" text-anchor="start">FinancialPlan, MonthParameters</text>
+<text x="972" y="230" class="body" text-anchor="start">MonthReport, PlanForecast</text>
+<text x="972" y="260" class="body" text-anchor="start">FinancialSummary, PlanComparison</text>
+<text x="972" y="290" class="body" text-anchor="start">PlanValidator, FinancialCalculator</text>
+<rect x="420" y="510" width="420" height="176" fill="white" stroke="#444" stroke-width="1.6"/><rect x="420" y="510" width="420" height="44" fill="#eee" stroke="#444" stroke-width="1.6"/>
+<text x="630.0" y="538" class="head" text-anchor="middle">Infrastructure — TaxiFinance.Infrastructure</text>
+<text x="436" y="586" class="body" text-anchor="start">SqlitePlanRepository (ЛР4)</text>
+<text x="436" y="616" class="body" text-anchor="start">Атомарное сохранение планов</text>
+<text x="436" y="646" class="body" text-anchor="start">Реализация IPlanRepository</text>
+<polyline points="318,243 420,243" fill="none" stroke="#444" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="340" y="225" class="edge" text-anchor="start">вызовы</text>
+<polyline points="840,243 956,243" fill="none" stroke="#444" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="872" y="225" class="edge" text-anchor="start">модель</text>
+<polyline points="630,510 630,390" fill="none" stroke="#444" stroke-width="1.8" marker-end="url(#arrow)" stroke-dasharray="7,5"/>
+<text x="650" y="456" class="edge" text-anchor="start">реализует порт</text>
+<polyline points="840,550 902,550 902,430 1100,430 1100,382" fill="none" stroke="#444" stroke-width="1.8" marker-end="url(#arrow)" stroke-dasharray="7,5"/>
+<text x="1120" y="425" class="edge" text-anchor="start">типы Domain</text>
+<path d="M986,560 L986,680 A170,22 0 0 0 1326,680 L1326,560 Z" fill="#f5f5f5" stroke="#444" stroke-width="1.6"/><ellipse cx="1156" cy="560" rx="170" ry="22" fill="#f5f5f5" stroke="#444" stroke-width="1.6"/>
+<text x="1156" y="615" class="head" text-anchor="middle">SQLite</text>
+<text x="1156" y="648" class="body" text-anchor="middle">Plan / MonthPlan (проект ЛР4)</text>
+<polyline points="840,614 986,614" fill="none" stroke="#444" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="894" y="594" class="edge" text-anchor="start">SQL</text>
+<text x="690" y="725" class="edge" text-anchor="middle">UI и Infrastructure финансового модуля проектируются; Domain/Application согласованы с ЛР3.</text>
+</svg>

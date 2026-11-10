@@ -1,0 +1,100 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classBackgroundColor white
+skinparam classHeaderBackgroundColor #EEEEEE
+skinparam classBorderColor #444444
+skinparam ArrowColor #444444
+skinparam classAttributeIconSize 0
+hide circle
+
+skinparam nodesep 35
+skinparam ranksep 45
+title Диаграмма классов — финансовое планирование такси
+class "Финансовый план\nFinancialPlan" as Plan {
+ + Id : Guid
+ + Name : string
+ + InitialCash : decimal
+ + Months : ReadOnlyCollection<MonthParameters>
+}
+class "Параметры месяца\nMonthParameters" as Params {
+ + Number : int
+ + Quantity : int
+ + Price : decimal
+ + VariableCost : decimal
+ + FixedCost : decimal
+ + PaymentPercent : int
+}
+class "Финансовый расчёт\nFinancialCalculator" as Calc {
+ + CalculateMonth(month, cash, debt) : MonthReport
+ + Summarize(reports) : FinancialSummary
+}
+class "Валидация\nPlanValidator" as Validator {
+ {static} + Validate(plan)
+ {static} + ValidateMonth(month)
+}
+class "Прогноз\nForecastService" as Forecast {
+ + Forecast(plan) : PlanForecast
+}
+class "Результат месяца\nMonthReport" as Report {
+ + Number : int
+ + OpeningCash : decimal
+ + OpeningDebt : decimal
+ + Revenue : decimal
+ + VariableExpenses : decimal
+ + ContributionMargin : decimal
+ + TotalExpenses : decimal
+ + Profit : decimal
+ + CurrentPayment : decimal
+ + Receipts : decimal
+ + ClosingCash : decimal
+ + ClosingDebt : decimal
+ + HasDeficit : bool
+}
+class "Прогноз плана\nPlanForecast" as Result {
+ + PlanId : Guid
+ + PlanName : string
+ + Months : ReadOnlyCollection<MonthReport>
+ + Summary : FinancialSummary
+}
+class "Итоги плана\nFinancialSummary" as Summary {
+ + TotalProfit : decimal
+ + FinalCash : decimal
+ + FinalDebt : decimal
+ + RequiredFinancing : decimal
+}
+class "Сравнение\nComparisonService" as Compare {
+ + Compare(left, right) : PlanComparison
+}
+class "Результат сравнения\nPlanComparison" as Comparison {
+ + Left : ComparisonSide
+ + Right : ComparisonSide
+}
+class "Сторона сравнения\nComparisonSide" as Side {
+ + PlanId : Guid
+ + PlanName : string
+ + Summary : FinancialSummary
+}
+interface "Хранилище (контракт)\nIPlanRepository" as Repository {
+ + SaveAsync(plan, ct)
+ + ListAsync(ct)
+ + LoadAsync(id, ct)
+}
+Plan "1" *-- "3" Params : содержит
+Result "1" *-- "3" Report : включает
+Result "1" *-- "1" Summary : итоги
+Comparison "1" *-- "2" Side : сравнивает
+Side "1" --> "1" Summary : содержит
+Calc ..> Params : использует
+Calc ..> Report : формирует
+Calc ..> Summary : вычисляет
+Calc ..> Validator : проверяет
+Forecast --> Calc : вызывает
+Forecast ..> Plan : получает
+Forecast ..> Result : формирует
+Compare --> Forecast : два прогноза
+Compare ..> Comparison : формирует
+Repository ..> Plan : сохраняемые входы
+@enduml

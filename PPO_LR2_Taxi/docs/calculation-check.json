@@ -1,0 +1,310 @@
+{
+  "A0": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "0.00",
+        "income": "0.00",
+        "cash": "-70000.00",
+        "debt": "150000.00"
+      },
+      {
+        "month": 2,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "0.00",
+        "income": "150000.00",
+        "cash": "-40000.00",
+        "debt": "150000.00"
+      },
+      {
+        "month": 3,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "0.00",
+        "income": "150000.00",
+        "cash": "-10000.00",
+        "debt": "150000.00"
+      }
+    ],
+    "profit": "90000",
+    "cash": "-10000.00",
+    "debt": "150000.00",
+    "financing": "70000.00"
+  },
+  "A50": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "75000.00",
+        "income": "75000.00",
+        "cash": "5000.00",
+        "debt": "75000.00"
+      },
+      {
+        "month": 2,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "75000.00",
+        "income": "150000.00",
+        "cash": "35000.00",
+        "debt": "75000.00"
+      },
+      {
+        "month": 3,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "75000.00",
+        "income": "150000.00",
+        "cash": "65000.00",
+        "debt": "75000.00"
+      }
+    ],
+    "profit": "90000",
+    "cash": "65000.00",
+    "debt": "75000.00",
+    "financing": "0"
+  },
+  "A100": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "150000.00",
+        "income": "150000.00",
+        "cash": "80000.00",
+        "debt": "0.00"
+      },
+      {
+        "month": 2,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "150000.00",
+        "income": "150000.00",
+        "cash": "110000.00",
+        "debt": "0.00"
+      },
+      {
+        "month": 3,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "150000.00",
+        "income": "150000.00",
+        "cash": "140000.00",
+        "debt": "0.00"
+      }
+    ],
+    "profit": "90000",
+    "cash": "140000.00",
+    "debt": "0.00",
+    "financing": "0"
+  },
+  "no_trips": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "0",
+        "variable": "0",
+        "margin": "0",
+        "expenses": "70000",
+        "profit": "-70000",
+        "current_payment": "0.00",
+        "income": "0.00",
+        "cash": "-20000.00",
+        "debt": "0.00"
+      },
+      {
+        "month": 2,
+        "revenue": "0",
+        "variable": "0",
+        "margin": "0",
+        "expenses": "70000",
+        "profit": "-70000",
+        "current_payment": "0.00",
+        "income": "0.00",
+        "cash": "-90000.00",
+        "debt": "0.00"
+      },
+      {
+        "month": 3,
+        "revenue": "0",
+        "variable": "0",
+        "margin": "0",
+        "expenses": "70000",
+        "profit": "-70000",
+        "current_payment": "0.00",
+        "income": "0.00",
+        "cash": "-160000.00",
+        "debt": "0.00"
+      }
+    ],
+    "profit": "-210000",
+    "cash": "-160000.00",
+    "debt": "0.00",
+    "financing": "160000.00"
+  },
+  "zero_cash": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "150000",
+        "profit": "0",
+        "current_payment": "75000.00",
+        "income": "75000.00",
+        "cash": "0.00",
+        "debt": "75000.00"
+      },
+      {
+        "month": 2,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "150000",
+        "profit": "0",
+        "current_payment": "75000.00",
+        "income": "150000.00",
+        "cash": "0.00",
+        "debt": "75000.00"
+      },
+      {
+        "month": 3,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "150000",
+        "profit": "0",
+        "current_payment": "75000.00",
+        "income": "150000.00",
+        "cash": "0.00",
+        "debt": "75000.00"
+      }
+    ],
+    "profit": "0",
+    "cash": "0.00",
+    "debt": "75000.00",
+    "financing": "0"
+  },
+  "updated_B": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "150000.00",
+        "income": "150000.00",
+        "cash": "80000.00",
+        "debt": "0.00"
+      },
+      {
+        "month": 2,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "75000.00",
+        "income": "75000.00",
+        "cash": "35000.00",
+        "debt": "75000.00"
+      },
+      {
+        "month": 3,
+        "revenue": "150000",
+        "variable": "50000",
+        "margin": "100000",
+        "expenses": "120000",
+        "profit": "30000",
+        "current_payment": "75000.00",
+        "income": "150000.00",
+        "cash": "65000.00",
+        "debt": "75000.00"
+      }
+    ],
+    "profit": "90000",
+    "cash": "65000.00",
+    "debt": "75000.00",
+    "financing": "0"
+  },
+  "kopeck": {
+    "months": [
+      {
+        "month": 1,
+        "revenue": "0.01",
+        "variable": "0",
+        "margin": "0.01",
+        "expenses": "0",
+        "profit": "0.01",
+        "current_payment": "0.01",
+        "income": "0.01",
+        "cash": "0.01",
+        "debt": "0.00"
+      },
+      {
+        "month": 2,
+        "revenue": "0.01",
+        "variable": "0",
+        "margin": "0.01",
+        "expenses": "0",
+        "profit": "0.01",
+        "current_payment": "0.01",
+        "income": "0.01",
+        "cash": "0.02",
+        "debt": "0.00"
+      },
+      {
+        "month": 3,
+        "revenue": "0.01",
+        "variable": "0",
+        "margin": "0.01",
+        "expenses": "0",
+        "profit": "0.01",
+        "current_payment": "0.01",
+        "income": "0.01",
+        "cash": "0.03",
+        "debt": "0.00"
+      }
+    ],
+    "profit": "0.03",
+    "cash": "0.03",
+    "debt": "0.00",
+    "financing": "0"
+  }
+}

@@ -1,0 +1,49 @@
+@startuml
+allowmixing
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 16
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classBackgroundColor white
+skinparam classHeaderBackgroundColor #EEEEEE
+skinparam classBorderColor #444444
+skinparam ArrowColor #444444
+skinparam classAttributeIconSize 0
+hide circle
+
+left to right direction
+skinparam linetype ortho
+hide empty members
+title Диаграмма компонентов — Служба такси
+class "UI — TaxiFinance.Web" as UI {
+ Blazor Web App (проект ЛР5)
+ Редактирование трёх месяцев
+ Прогноз, список и сравнение
+ Сообщения об ошибках
+}
+class "Application — TaxiFinance.Application" as App {
+ ForecastService
+ ComparisonService
+ Порт: IPlanRepository
+ Валидация сценариев
+}
+class "Domain — TaxiFinance.Domain" as Domain {
+ FinancialPlan, MonthParameters
+ MonthReport, PlanForecast
+ FinancialSummary, PlanComparison
+ PlanValidator, FinancialCalculator
+}
+class "Infrastructure — TaxiFinance.Infrastructure" as Infra {
+ SqlitePlanRepository (проект ЛР4)
+ Атомарное сохранение планов
+ Реализация IPlanRepository
+}
+database "SQLite\nPlan / MonthPlan\n(проект ЛР4)" as DB
+UI -right-> App : вызовы
+App -right-> Domain : модель / формулы
+Infra ..> App : реализует порт
+Infra ..> Domain : типы Domain
+Infra -right-> DB : SQL
+App -[hidden]down-> Infra
+Domain -[hidden]down-> DB
+@enduml

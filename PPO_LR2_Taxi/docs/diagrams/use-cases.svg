@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100" role="img" aria-labelledby="title desc"><title id="title">ЛР1. Варианты использования сайта службы такси</title><desc id="desc">Клиент связан с расчётом стоимости, созданием и просмотром своих заказов. Руководитель связан с планируемыми финансовыми сценариями С1–С3.</desc><rect width="100%" height="100%" fill="white"/>
+<text x="750" y="40.0" font-family="Arial" font-size="34" font-weight="bold" text-anchor="middle" dominant-baseline="central">ЛР1. Варианты использования сайта «Служба такси»</text>
+<rect x="420" y="105" width="1050" height="930" fill="none" stroke="#333333" stroke-width="3"/>
+<text x="945" y="148.0" font-family="Arial" font-size="27" font-weight="bold" text-anchor="middle" dominant-baseline="central">Граница приложения</text>
+<circle cx="210" cy="232" r="32" fill="none" stroke="#333333" stroke-width="3"/>
+<polyline points="210,264 210,362" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="142,303 278,303" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="210,362 160,435" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="210,362 260,435" stroke="#333333" stroke-width="3" fill="none"/>
+<text x="210" y="469.0" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle" dominant-baseline="central">Клиент</text>
+<text x="210" y="510.0" font-family="Arial" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="central">Существующие функции</text>
+<circle cx="210" cy="667" r="32" fill="none" stroke="#333333" stroke-width="3"/>
+<polyline points="210,699 210,797" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="142,738 278,738" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="210,797 160,870" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="210,797 260,870" stroke="#333333" stroke-width="3" fill="none"/>
+<text x="210" y="904.0" font-family="Arial" font-size="30" font-weight="bold" text-anchor="middle" dominant-baseline="central">Руководитель</text>
+<text x="210" y="939" font-family="Arial" font-size="21" text-anchor="middle" dominant-baseline="central">(финансовый директор)</text>
+<text x="210" y="978.0" font-family="Arial" font-size="21" font-weight="normal" text-anchor="middle" dominant-baseline="central">Планируемое расширение</text>
+<polyline points="278,303 580,260" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="278,303 580,410" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="278,303 580,560" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="278,738 580,700" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="278,738 580,830" stroke="#333333" stroke-width="3" fill="none"/>
+<polyline points="278,738 580,960" stroke="#333333" stroke-width="3" fill="none"/>
+<ellipse cx="945" cy="260" rx="365" ry="52" fill="#f0f4f8" stroke="#333333" stroke-width="3"/>
+<text x="945" y="260.0" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">Рассчитать стоимость поездки</text>
+<ellipse cx="945" cy="410" rx="365" ry="52" fill="#f0f4f8" stroke="#333333" stroke-width="3"/>
+<text x="945" y="410.0" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">Создать заказ</text>
+<ellipse cx="945" cy="560" rx="365" ry="52" fill="#f0f4f8" stroke="#333333" stroke-width="3"/>
+<text x="945" y="560.0" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">Просмотреть свои заказы</text>
+<ellipse cx="945" cy="700" rx="365" ry="52" fill="#f0f4f8" stroke="#333333" stroke-width="3"/>
+<text x="945" y="682.45" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">С1. Создать или изменить план</text>
+<text x="945" y="717.55" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">и рассчитать прогноз</text>
+<ellipse cx="945" cy="830" rx="365" ry="52" fill="#f0f4f8" stroke="#333333" stroke-width="3"/>
+<text x="945" y="830.0" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">С2. Сравнить два плана</text>
+<ellipse cx="945" cy="960" rx="365" ry="52" fill="#f0f4f8" stroke="#333333" stroke-width="3"/>
+<text x="945" y="960.0" font-family="Arial" font-size="27" font-weight="normal" text-anchor="middle" dominant-baseline="central">С3. Сохранить и открыть план</text>
+<text x="950" y="1070.0" font-family="Arial" font-size="23" font-weight="normal" text-anchor="middle" dominant-baseline="central">С1–С3 соответствуют сценариям спецификации</text>
+</svg>
