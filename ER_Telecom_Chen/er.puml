@@ -1,0 +1,28 @@
+@startchen
+left to right direction
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 18
+entity "Финансовый план / FinancialPlan" as FinancialPlan {
+ "Идентификатор плана (plan_id)" as plan_id <<key>>
+ "Название (name)" as name
+ "Начальный год (start_year)" as start_year
+ "Начальный месяц (start_month)" as start_month
+}
+' PlanMonth — слабая сущность. month_index — частичный ключ.
+' На основной SVG частичный ключ подчёркнут пунктиром.
+entity "Месяц плана / PlanMonth" as PlanMonth <<weak>> {
+ "Номер месяца (month_index)" as month_index <<key>>
+ "Активные клиенты (active_clients)" as active_clients
+ "Минуты на клиента (avg_minutes_per_client)" as avg_minutes_per_client
+ "Цена минуты (avg_price_per_minute)" as avg_price_per_minute
+ "Абонплата на клиента (monthly_fee_per_client)" as monthly_fee_per_client
+ "Операционные расходы (operational_costs)" as operational_costs
+ "Доля оплаты (payment_rate_percent)" as payment_rate_percent
+}
+relationship "Содержит" as Contains <<identifying>> {
+}
+Contains =1= FinancialPlan
+Contains =N= PlanMonth
+' У каждого плана ровно три месяца; индексы 1,2,3.
+' Все атрибуты обязательны. PlanMonth.plan_id определяется связью.
+@endchen

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2300" height="1600" viewBox="0 0 2300 1600" role="img" aria-labelledby="title desc"><title id="title">АИС учёта вызовов оператора связи — ER-модель Чена</title><desc id="desc">Сущность FinancialPlan идентифицирует слабую сущность PlanMonth через связь Содержит. Ключ плана — plan_id, частичный ключ месяца — month_index. Сохранены исходные атрибуты и ограничение ровно три месяца.</desc><rect width="2300" height="1600" fill="white"/><style>text{font-family:Arial,DejaVu Sans,sans-serif;fill:#222}.title{font-size:38px;font-weight:700}.entity{font-size:30px;font-weight:700}.attr{font-size:26px}.code{font-size:22px;fill:#4c5663}.card{font-size:30px;font-weight:700}.legend{font-size:22px}</style>
+<text x="1150" y="62" class="title" text-anchor="middle">АИС учёта вызовов оператора связи — ER-модель Чена</text>
+<text x="1150" y="108" class="attr" text-anchor="middle">Финансовый план и три месяца плана · ЛР2-Д5</text>
+<line x1="500" y1="650" x2="250" y2="330" stroke="#333" stroke-width="2.3"/>
+<line x1="500" y1="650" x2="550" y2="230" stroke="#333" stroke-width="2.3"/>
+<line x1="500" y1="650" x2="210" y2="930" stroke="#333" stroke-width="2.3"/>
+<line x1="500" y1="650" x2="580" y2="1080" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1480" y2="230" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1950" y2="360" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1950" y2="600" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1950" y2="840" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1650" y2="1070" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1300" y2="1210" stroke="#333" stroke-width="2.3"/>
+<line x1="1530" y1="650" x2="1100" y2="940" stroke="#333" stroke-width="2.3"/>
+<line x1="650" y1="646" x2="890" y2="646" stroke="#333" stroke-width="2.3"/>
+<line x1="1110" y1="646" x2="1370" y2="646" stroke="#333" stroke-width="2.3"/>
+<line x1="650" y1="654" x2="890" y2="654" stroke="#333" stroke-width="2.3"/>
+<line x1="1110" y1="654" x2="1370" y2="654" stroke="#333" stroke-width="2.3"/>
+<text x="765" y="626" class="card" text-anchor="middle">1</text>
+<text x="1240" y="626" class="card" text-anchor="middle">N</text>
+<rect x="350" y="595" width="300" height="110" fill="#e7eff8" stroke="#333" stroke-width="2.4"/>
+<text x="500" y="637" class="entity" text-anchor="middle">Финансовый план</text>
+<text x="500" y="678" class="attr" text-anchor="middle">FinancialPlan</text>
+<rect x="1370" y="595" width="320" height="110" fill="#e7eff8" stroke="#333" stroke-width="2.4"/><rect x="1378" y="603" width="304" height="94" fill="none" stroke="#333" stroke-width="2.1"/>
+<text x="1530" y="637" class="entity" text-anchor="middle">Месяц плана</text>
+<text x="1530" y="678" class="attr" text-anchor="middle">PlanMonth</text>
+<polygon points="1000,575 1110,650 1000,725 890,650" fill="#fff2d1" stroke="#333" stroke-width="2.4"/><polygon points="1000,585 1096,650 1000,715 904,650" fill="none" stroke="#333" stroke-width="2.1"/>
+<text x="1000" y="659" class="attr" text-anchor="middle">Содержит</text>
+<ellipse cx="250" cy="330" rx="220" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="250" y="324" class="attr" text-anchor="middle">Идентификатор плана</text>
+<text x="250" y="356" class="code" text-anchor="middle">plan_id</text>
+<line x1="208.0" y1="365" x2="292.0" y2="365" stroke="#333" stroke-width="2.3"/>
+<ellipse cx="550" cy="230" rx="210" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="550" y="224" class="attr" text-anchor="middle">Название</text>
+<text x="550" y="256" class="code" text-anchor="middle">name</text>
+<ellipse cx="210" cy="930" rx="180" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="210" y="924" class="attr" text-anchor="middle">Начальный год</text>
+<text x="210" y="956" class="code" text-anchor="middle">start_year</text>
+<ellipse cx="580" cy="1080" rx="240" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="580" y="1074" class="attr" text-anchor="middle">Начальный месяц</text>
+<text x="580" y="1106" class="code" text-anchor="middle">start_month</text>
+<ellipse cx="1480" cy="230" rx="230" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1480" y="224" class="attr" text-anchor="middle">Номер месяца</text>
+<text x="1480" y="256" class="code" text-anchor="middle">month_index</text>
+<line x1="1414.0" y1="265" x2="1546.0" y2="265" stroke="#333" stroke-width="2.3" stroke-dasharray="8,5"/>
+<ellipse cx="1950" cy="360" rx="200" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1950" y="354" class="attr" text-anchor="middle">Активные клиенты</text>
+<text x="1950" y="386" class="code" text-anchor="middle">active_clients</text>
+<ellipse cx="1950" cy="600" rx="230" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1950" y="594" class="attr" text-anchor="middle">Минуты на клиента</text>
+<text x="1950" y="626" class="code" text-anchor="middle">avg_minutes_per_client</text>
+<ellipse cx="1950" cy="840" rx="220" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1950" y="834" class="attr" text-anchor="middle">Средняя цена минуты</text>
+<text x="1950" y="866" class="code" text-anchor="middle">avg_price_per_minute</text>
+<ellipse cx="1650" cy="1070" rx="245" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1650" y="1064" class="attr" text-anchor="middle">Абонплата на клиента</text>
+<text x="1650" y="1096" class="code" text-anchor="middle">monthly_fee_per_client</text>
+<ellipse cx="1300" cy="1210" rx="230" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1300" y="1204" class="attr" text-anchor="middle">Операционные расходы</text>
+<text x="1300" y="1236" class="code" text-anchor="middle">operational_costs</text>
+<ellipse cx="1100" cy="940" rx="230" ry="55" fill="white" stroke="#333" stroke-width="2.1"/>
+<text x="1100" y="934" class="attr" text-anchor="middle">Доля оплаты, %</text>
+<text x="1100" y="966" class="code" text-anchor="middle">payment_rate_percent</text>
+<rect x="55" y="1320" width="2190" height="230" rx="10" fill="#f7f8fa" stroke="#d5d9df"/>
+<text x="82" y="1357" class="legend" text-anchor="start">Ключ plan_id — непустой уникальный UUID (сплошная линия); частичный ключ month_index подчёркнут пунктиром.</text>
+<text x="82" y="1390" class="legend" text-anchor="start">Двойные рамки обозначают слабую сущность и идентифицирующую связь; двойные линии — обязательное участие.</text>
+<text x="82" y="1423" class="legend" text-anchor="start">В плане ровно три месяца: month_index ∈ {1,2,3}; все атрибуты обязательны, name после trim непусто. Ключ: (plan_id, month_index).</text>
+<text x="82" y="1456" class="legend" text-anchor="start">Период = (start_year, start_month) + (month_index − 1); годы всех трёх периодов — 2020…2099; start_month — 1…12.</text>
+<text x="82" y="1489" class="legend" text-anchor="start">active_clients — целое ≥1; avg_minutes_per_client ≥0; avg_price_per_minute &gt;0.</text>
+<text x="82" y="1522" class="legend" text-anchor="start">monthly_fee_per_client ≥0; operational_costs ≥0; payment_rate_percent — 0…100.</text>
+</svg>
