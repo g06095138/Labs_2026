@@ -1,43 +1,25 @@
-@startuml
+@startchen
 skinparam defaultFontName DejaVu Sans
-skinparam defaultFontSize 16
-skinparam shadowing false
-skinparam backgroundColor white
-skinparam classBackgroundColor white
-skinparam classHeaderBackgroundColor #EEEEEE
-skinparam classBorderColor #444444
-skinparam ArrowColor #444444
-skinparam classAttributeIconSize 0
-hide circle
-
+skinparam defaultFontSize 18
 left to right direction
-skinparam linetype ortho
-title Логическая ER-модель — финансовые планы такси
-entity "Plan — финансовый план" as Plan {
- * Id : UUID <<PK>>
- --
- * Name : название
- * InitialCash : денежная сумма
+entity "Финансовый план" as Plan {
+ "Идентификатор плана" as Id <<key>>
+ "Название" as Name
+ "Начальные деньги" as InitialCash
 }
-entity "MonthPlan — месяц плана" as Month {
- * PlanId : UUID <<PK, FK>>
- * Number : номер 1..3 <<PK>>
- --
- * Quantity : целое количество поездок
- * Price : денежная сумма / поездку
- * VariableCost : денежная сумма / поездку
- * FixedCost : денежная сумма / месяц
- * PaymentPercent : целый процент 0..100
+' Месяц — слабая сущность; Number является частичным ключом.
+' В основной SVG частичный ключ подчёркнут пунктиром.
+' Дополнительное ограничение: ровно 3 месяца с Number=1,2,3.
+entity "Месяц плана" as Month <<weak>> {
+ "Номер месяца" as Number <<key>>
+ "Количество поездок" as Quantity
+ "Средняя цена поездки" as Price
+ "Переменные затраты" as VariableCost
+ "Постоянные расходы" as FixedCost
+ "Процент оплаты" as PaymentPercent
 }
-Plan "1" -- "3" Month : содержит
-note bottom of Month
-PK (PlanId, Number), FK PlanId → Plan.Id.
-Полный набор 1,2,3 проверяет Application.
-Plan и три MonthPlan сохраняются атомарно.
-end note
-note bottom of Plan
-Сохраняются входы, отчёт вычисляется.
-Это логические типы, без SQL-типов.
-Физическая SQLite-схема — ЛР4.
-end note
-@enduml
+relationship "Содержит" as Contains <<identifying>> {
+}
+Contains =1= Plan
+Contains =N= Month
+@endchen
