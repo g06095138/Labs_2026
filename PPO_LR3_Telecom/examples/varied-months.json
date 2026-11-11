@@ -1,0 +1,39 @@
+{
+  "Id": "00000000-0000-4000-8000-000000001003",
+  "Name": "Разные параметры месяцев",
+  "InitialCash": 10000,
+  "StartYear": 2026,
+  "StartMonth": 11,
+  "Months": [
+    {
+      "Number": 1,
+      "ActiveClients": 10,
+      "AvgBillableMinutesPerClient": 100,
+      "PricePerMinute": 20,
+      "MonthlyFeePerClient": 1000,
+      "VariableCostPerClient": 1000,
+      "OperationalCosts": 5000,
+      "PaymentPercent": 50
+    },
+    {
+      "Number": 2,
+      "ActiveClients": 5,
+      "AvgBillableMinutesPerClient": 100,
+      "PricePerMinute": 30,
+      "MonthlyFeePerClient": 1000,
+      "VariableCostPerClient": 1200,
+      "OperationalCosts": 6000,
+      "PaymentPercent": 0
+    },
+    {
+      "Number": 3,
+      "ActiveClients": 8,
+      "AvgBillableMinutesPerClient": 100,
+      "PricePerMinute": 20,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 900,
+      "OperationalCosts": 7000,
+      "PaymentPercent": 100
+    }
+  ]
+}

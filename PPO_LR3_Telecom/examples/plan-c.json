@@ -1,0 +1,39 @@
+{
+  "Id": "00000000-0000-4000-8000-000000000100",
+  "Name": "Оператор связи — 100% сразу",
+  "InitialCash": 50000,
+  "StartYear": 2026,
+  "StartMonth": 11,
+  "Months": [
+    {
+      "Number": 1,
+      "ActiveClients": 100,
+      "AvgBillableMinutesPerClient": 200,
+      "PricePerMinute": 5,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 500,
+      "OperationalCosts": 70000,
+      "PaymentPercent": 100
+    },
+    {
+      "Number": 2,
+      "ActiveClients": 100,
+      "AvgBillableMinutesPerClient": 200,
+      "PricePerMinute": 5,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 500,
+      "OperationalCosts": 70000,
+      "PaymentPercent": 100
+    },
+    {
+      "Number": 3,
+      "ActiveClients": 100,
+      "AvgBillableMinutesPerClient": 200,
+      "PricePerMinute": 5,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 500,
+      "OperationalCosts": 70000,
+      "PaymentPercent": 100
+    }
+  ]
+}

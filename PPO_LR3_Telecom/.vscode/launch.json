@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ЛР3: демонстрация (0%, 50%, 100%)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Собрать TelecomFinance",
+      "program": "${workspaceFolder}/src/TelecomFinance.Console/bin/Debug/net10.0/TelecomFinance.Console.dll",
+      "args": [
+        "demo"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "ЛР3: рассчитать план 50%",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Собрать TelecomFinance",
+      "program": "${workspaceFolder}/src/TelecomFinance.Console/bin/Debug/net10.0/TelecomFinance.Console.dll",
+      "args": [
+        "forecast",
+        "examples/plan-b.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "ЛР3: сравнить 0% и 50%",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Собрать TelecomFinance",
+      "program": "${workspaceFolder}/src/TelecomFinance.Console/bin/Debug/net10.0/TelecomFinance.Console.dll",
+      "args": [
+        "compare",
+        "examples/plan-a.json",
+        "examples/plan-b.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "ЛР3: разные параметры месяцев",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "Собрать TelecomFinance",
+      "program": "${workspaceFolder}/src/TelecomFinance.Console/bin/Debug/net10.0/TelecomFinance.Console.dll",
+      "args": [
+        "forecast",
+        "examples/varied-months.json"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}

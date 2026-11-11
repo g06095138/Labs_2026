@@ -1,0 +1,31 @@
+ЛР3 — ОПЕРАТОР СВЯЗИ
+
+1. Распакуйте архив. Откройте в VS Code всю папку LR3_Telecom,
+   где лежат TelecomFinance.sln, src, tests и examples.
+2. Нужны .NET 10 SDK и расширение C# Dev Kit от Microsoft.
+3. Откройте src → TelecomFinance.Console → Program.cs.
+4. Нажмите ▶ вверху справа или Выполнить → Запустить без отладки.
+   Если спросят проект, выберите TelecomFinance.Console.
+5. В терминале появятся расчёты 0%, 50%, 100% оплаты сразу
+   и сравнение двух планов. После вывода программа завершится.
+
+ТЕСТЫ БЕЗ КОМАНД
+Нажмите значок колбы «Тестирование» слева → «Запустить все тесты».
+
+ЕСЛИ НУЖНЫ КОМАНДЫ
+Откройте Терминал → Создать терминал и по одной выполните:
+
+dotnet restore TelecomFinance.sln --locked-mode
+dotnet build TelecomFinance.sln -c Release --no-restore
+dotnet run --project src/TelecomFinance.Console -c Release --no-build -- demo
+dotnet test TelecomFinance.sln -c Release --no-build
+
+ЧТО ПОКАЗАТЬ ПРЕПОДАВАТЕЛЮ
+- docs/requirements.md — требования, числовые примеры, таблица соответствия;
+- docs/design.md и docs/diagrams/domain.svg — проектирование;
+- FinancialCalculator.cs — формулы;
+- ForecastService.cs — три месяца и перенос денег/долга;
+- демонстрацию в терминале и пройденные тесты.
+
+Это консольная ЛР3. Хранение планов в БД — ЛР4, веб-экран — ЛР5.
+Подробности и объяснение результата: README.md и docs/defense.md.

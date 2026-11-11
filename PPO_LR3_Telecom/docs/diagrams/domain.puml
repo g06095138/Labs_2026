@@ -1,0 +1,108 @@
+@startuml
+!theme plain
+set namespaceSeparator none
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam roundcorner 0
+skinparam classAttributeIconSize 0
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 15
+skinparam classFontSize 17
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+hide circle
+hide empty members
+top to bottom direction
+title ЛР3. Оператор связи — классы финансового прогнозирования
+
+package "TelecomFinance.Domain — модель и расчёты" {
+ class "План\nFinancialPlan" as Plan {
+  +Id: Guid {readOnly}
+  +Name: string {readOnly}
+  +InitialCash: decimal {readOnly}
+  +StartYear: int {readOnly}
+  +StartMonth: int {readOnly}
+  +Months: ReadOnlyCollection<MonthParameters>
+ }
+ class "Параметры месяца\nMonthParameters" as Month <<record>> {
+  +Number: int
+  +ActiveClients: int
+  +AvgBillableMinutesPerClient: int
+  +PricePerMinute: decimal
+  +MonthlyFeePerClient: decimal
+  +VariableCostPerClient: decimal
+  +OperationalCosts: decimal
+  +PaymentPercent: int
+ }
+ class "Прогноз\nPlanForecast" as Forecast {
+  +PlanId: Guid {readOnly}
+  +PlanName: string {readOnly}
+  +StartPeriod: DateOnly {readOnly}
+  +Months: ReadOnlyCollection<MonthReport>
+  +Summary: FinancialSummary {readOnly}
+ }
+ class "Результат месяца\nMonthReport" as Report <<record>> {
+  +Number: int
+  +OpeningCash, OpeningDebt: decimal
+  +Revenue, VariableExpenses: decimal
+  +ContributionMargin, TotalExpenses: decimal
+  +Profit, CurrentPayment: decimal
+  +Receipts: decimal
+  +ClosingCash, ClosingDebt: decimal
+  +BillableMinutes: long
+  +CallRevenue, SubscriptionRevenue: decimal
+  +HasDeficit: bool {readOnly}
+ }
+ class "Итоги трёх месяцев\nFinancialSummary" as Summary <<record>> {
+  +TotalProfit: decimal
+  +FinalCash: decimal
+  +FinalDebt: decimal
+  +RequiredFinancing: decimal
+ }
+ class "Сторона сравнения\nComparisonSide" as Side <<record>> {
+  +PlanId: Guid
+  +PlanName: string
+  +Summary: FinancialSummary
+ }
+ class "Сравнение\nPlanComparison" as Comparison <<record>> {
+  +Left: ComparisonSide
+  +Right: ComparisonSide
+ }
+ class "Финансовые формулы\nFinancialCalculator" as Calc {
+  +CalculateMonth(month: MonthParameters,\n openingCash: decimal, openingDebt: decimal): MonthReport
+  +Summarize(months: IReadOnlyList<MonthReport>): FinancialSummary
+ }
+ class "Проверка входных данных\nPlanValidator" as Validator <<static>> {
+  +Validate(plan: FinancialPlan): void
+  +ValidateMonth(month: MonthParameters): void
+ }
+ Plan "1" *-- "3" Month : содержит
+ Forecast "1" *-- "3" Report : содержит
+ Forecast "1" *-- "1" Summary : итог
+ Comparison "1" *-- "2" Side : Left / Right
+ Side --> Summary : итоги плана
+ Calc ..> Month : использует
+ Validator ..> Plan : проверяет
+}
+
+package "TelecomFinance.Application — операции" {
+ class "Расчёт плана\nForecastService" as ForecastSvc {
+  +Forecast(plan: FinancialPlan): PlanForecast
+ }
+ class "Сравнение планов\nComparisonService" as CompareSvc {
+  +Compare(left: FinancialPlan, right: FinancialPlan): PlanComparison
+ }
+ ForecastSvc --> Calc : вызывает
+ ForecastSvc ..> Validator : проверяет весь план
+ CompareSvc --> ForecastSvc : два независимых расчёта
+}
+
+legend bottom
+  Сплошной ромб — состав объекта. Пунктирная стрелка — зависимость.
+  Итоги и отчёты вычисляются; это классы кода, а не таблицы БД.
+  Неизменяемый план содержит месяцы 1, 2, 3. Начальный долг первого месяца равен 0.
+  Q = абоненты; P = минуты × цена + абонплата; все денежные вычисления — decimal.
+  Интерфейс хранилища IPlanRepository не участвует в расчёте ЛР3.
+endlegend
+@enduml

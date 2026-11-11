@@ -1,0 +1,39 @@
+{
+  "Id": "00000000-0000-4000-8000-000000001000",
+  "Name": "Нет абонентов",
+  "InitialCash": 50000,
+  "StartYear": 2026,
+  "StartMonth": 11,
+  "Months": [
+    {
+      "Number": 1,
+      "ActiveClients": 0,
+      "AvgBillableMinutesPerClient": 200,
+      "PricePerMinute": 5,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 500,
+      "OperationalCosts": 70000,
+      "PaymentPercent": 50
+    },
+    {
+      "Number": 2,
+      "ActiveClients": 0,
+      "AvgBillableMinutesPerClient": 200,
+      "PricePerMinute": 5,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 500,
+      "OperationalCosts": 70000,
+      "PaymentPercent": 50
+    },
+    {
+      "Number": 3,
+      "ActiveClients": 0,
+      "AvgBillableMinutesPerClient": 200,
+      "PricePerMinute": 5,
+      "MonthlyFeePerClient": 500,
+      "VariableCostPerClient": 500,
+      "OperationalCosts": 70000,
+      "PaymentPercent": 50
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "total": 19,
+  "passed": 19,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "forecast: plan-a.json",
+      "passed": true
+    },
+    {
+      "name": "forecast: plan-b.json",
+      "passed": true
+    },
+    {
+      "name": "forecast: plan-c.json",
+      "passed": true
+    },
+    {
+      "name": "forecast: no-clients.json",
+      "passed": true
+    },
+    {
+      "name": "forecast: zero-cash.json",
+      "passed": true
+    },
+    {
+      "name": "forecast: varied-months.json",
+      "passed": true
+    },
+    {
+      "name": "compare: independent plans",
+      "passed": true
+    },
+    {
+      "name": "reject: invalid payment percentage",
+      "passed": true
+    },
+    {
+      "name": "reject: InitialCash",
+      "passed": true
+    },
+    {
+      "name": "reject: Name",
+      "passed": true
+    },
+    {
+      "name": "reject: StartMonth",
+      "passed": true
+    },
+    {
+      "name": "reject: fractional ActiveClients",
+      "passed": true
+    },
+    {
+      "name": "reject: fractional PaymentPercent",
+      "passed": true
+    },
+    {
+      "name": "reject: fractional AvgBillableMinutesPerClient",
+      "passed": true
+    },
+    {
+      "name": "reject: unknown field",
+      "passed": true
+    },
+    {
+      "name": "reject: missing field",
+      "passed": true
+    },
+    {
+      "name": "reject: duplicate JSON key",
+      "passed": true
+    },
+    {
+      "name": "reject: comparison with itself",
+      "passed": true
+    },
+    {
+      "name": "reject: missing file",
+      "passed": true
+    }
+  ]
+}

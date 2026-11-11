@@ -1,0 +1,42 @@
+@startuml
+!theme plain
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam roundcorner 0
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 16
+skinparam componentStyle rectangle
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 60
+left to right direction
+title ЛР3. Оператор связи — структура программы
+
+rectangle "Console — TelecomFinance.Console\n\nProgram: demo / forecast / compare\nPlanInput: строгий ввод JSON\nТаблица, сравнение и сообщения об ошибках" as UI
+rectangle "Application — TelecomFinance.Application\n\nForecastService: три месяца и перенос остатков\nComparisonService: независимые прогнозы\nIPlanRepository: контракт будущего хранения" as App
+rectangle "Domain — TelecomFinance.Domain\n\nFinancialPlan, MonthParameters\nMonthReport, FinancialSummary\nPlanForecast, PlanComparison, ComparisonSide\nFinancialCalculator: формулы decimal\nPlanValidator: допустимость плана" as Domain
+rectangle "Tests — TelecomFinance.Tests\n\nxUnit: примеры, перенос денег и долга\nПовторный расчёт, сравнение, ошибки\nНеизменность исходных данных" as Tests
+rectangle "Будущее расширение — ЛР4\n\nРеализация IPlanRepository\nПостоянное хранение планов" as Storage #F5F5F5
+
+UI --> App : вызовы операций
+App --> Domain : использует модель и формулы
+UI ..> Domain : входной план и результаты
+Tests ..> App : проверяет операции
+Tests ..> Domain : проверяет ядро
+Storage ..> App : реализует контракт\n(ещё не реализовано)
+
+note bottom of App
+  Application проверяет весь план до расчёта.
+  Каждый запуск начинает с исходных данных.
+  Деньги и долг переносятся между месяцами.
+end note
+note bottom of Storage
+  В ЛР3 база данных не требуется.
+  Веб-интерфейс относится к ЛР5.
+end note
+legend bottom
+  Сплошные стрелки — текущие вызовы между слоями.
+  Пунктир — использование типов, тестирование или будущая реализация.
+  Domain не зависит от консоли, Application или хранилища.
+endlegend
+@enduml
