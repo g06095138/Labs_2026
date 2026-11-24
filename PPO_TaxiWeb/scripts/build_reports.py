@@ -44,7 +44,7 @@ def picture(doc,path,caption):
 groups=[
  (0,'Расчёт стоимости поездки',['docs/project.md','docs/lab0.md','docs/adaptation.md'],[('domain.png','Диаграмма классов')]),
  (1,'Анализ требований',['docs/requirements.md'],[('use-cases.png','Варианты использования')]),
- (2,'Проектирование системы',['docs/design.md','docs/data.md'],[('components.png','Диаграмма компонентов'),('domain.png','Диаграмма классов'),('er.png','ER-модель данных'),('workflow.png','Жизненный цикл заказа')]),
+ (2,'Проектирование системы',['docs/design.md','docs/data.md'],[('components.png','Диаграмма компонентов'),('domain.png','Диаграмма классов'),('er-chen.png','ER-диаграмма в нотации Чена'),('workflow.png','Жизненный цикл заказа')]),
  (3,'Бизнес-логика и тестирование',['docs/lab3.md','docs/requirements.md','docs/validation.md'],[('domain.png','Актуальная диаграмма классов')]),
  (4,'Хранение данных',['docs/lab4.md','docs/data.md','docs/validation.md'],[('er.png','Физическая схема SQLite')]),
  (5,'Веб-интерфейс',['docs/lab5.md','docs/ui.md','README.md','docs/validation.md'],[])]

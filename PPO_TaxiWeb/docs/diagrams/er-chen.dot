@@ -1,0 +1,71 @@
+graph TaxiChen {
+  graph [bgcolor=white, fontname="DejaVu Sans", fontsize=20,
+         label="Служба такси — ER-диаграмма в нотации Чена",
+         labelloc=t, pad=0.3, layout=neato, overlap=false, splines=true];
+  node [fontname="DejaVu Sans", fontsize=13, color="#34455a"];
+  edge [fontname="DejaVu Sans", fontsize=12, color="#34455a", labeldistance=1.4];
+
+  node [shape=box, style=filled, fillcolor="#dceafa"];
+  client [label="Клиент"];
+  driver [label="Водитель"];
+  trip [label="Заказ"];
+  tariff [label="Тариф"];
+  account [label="Учётная запись"];
+
+  node [shape=diamond, fillcolor="#fff0cb"];
+  creates [label="Создаёт"];
+  serves [label="Выполняет"];
+  applies [label="Применяется"];
+  client_profile [label="Профиль\nклиента"];
+  driver_profile [label="Профиль\nводителя"];
+
+  // Each edge label gives the participation range for that entity.
+  client -- creates [taillabel="0..N"];
+  creates -- trip [headlabel="1"];
+  driver -- serves [taillabel="0..N"];
+  serves -- trip [headlabel="0..1"];
+  tariff -- applies [taillabel="0..N"];
+  applies -- trip [headlabel="1"];
+  account -- client_profile [taillabel="0..1"];
+  client_profile -- client [headlabel="0..1"];
+  account -- driver_profile [taillabel="0..1"];
+  driver_profile -- driver [headlabel="0..1"];
+
+  node [shape=ellipse, style=solid];
+
+  client_id [label=<<U>ID клиента</U>>];
+  client_name [label="ФИО"];
+  client_phone [label="Телефон"];
+  client -- {client_id client_name client_phone};
+
+  driver_id [label=<<U>ID водителя</U>>];
+  driver_name [label="ФИО"];
+  driver_car [label="Автомобиль"];
+  driver_plate [label="Госномер"];
+  driver_available [label="Доступность"];
+  driver -- {driver_id driver_name driver_car driver_plate driver_available};
+
+  trip_id [label=<<U>ID заказа</U>>];
+  pickup [label="Адрес подачи"];
+  destination [label="Адрес назначения"];
+  distance [label="Расстояние"];
+  trip_base [label="Базовая цена"];
+  trip_rate [label="Цена за км"];
+  cost [label="Стоимость"];
+  status [label="Статус"];
+  created_at [label="Дата создания"];
+  trip -- {trip_id pickup destination distance trip_base trip_rate cost status created_at};
+
+  tariff_id [label=<<U>ID тарифа</U>>];
+  tariff_name [label="Название"];
+  base [label="Базовая цена"];
+  rate [label="Цена за км"];
+  active [label="Активность"];
+  tariff -- {tariff_id tariff_name base rate active};
+
+  account_id [label=<<U>ID учётной записи</U>>];
+  login [label="Логин"];
+  password_hash [label="Хеш пароля"];
+  role [label="Роль"];
+  account -- {account_id login password_hash role};
+}
